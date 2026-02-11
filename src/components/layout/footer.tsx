@@ -2,14 +2,15 @@ import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { footerNav } from "@/config/navigation";
 import { Separator } from "@/components/ui/separator";
+import { NewsletterForm } from "@/components/forms/newsletter-form";
 
 export function Footer() {
   return (
     <footer className="bg-slate-950 text-slate-300">
       <div className="container py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Brand */}
-          <div className="lg:col-span-1">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+          {/* Brand + Newsletter */}
+          <div className="lg:col-span-2">
             <Link href="/" className="text-xl font-bold font-jakarta text-white">
               <span className="text-primary">Your</span>Agency
             </Link>
@@ -17,18 +18,13 @@ export function Footer() {
               Your all-in-one growth partner. We build, optimize, and scale
               your digital presence.
             </p>
-            <div className="flex gap-4 mt-6">
-              {Object.entries(siteConfig.links).map(([platform, url]) => (
-                <a
-                  key={platform}
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-slate-400 hover:text-white transition-colors text-sm capitalize"
-                >
-                  {platform}
-                </a>
-              ))}
+
+            {/* Newsletter */}
+            <div className="mt-6">
+              <h3 className="text-sm font-semibold text-white mb-3">
+                Stay Updated
+              </h3>
+              <NewsletterForm variant="dark" />
             </div>
           </div>
 
@@ -93,6 +89,19 @@ export function Footer() {
                 </a>
               </li>
             </ul>
+            <div className="flex gap-4 mt-6">
+              {Object.entries(siteConfig.links).map(([platform, url]) => (
+                <a
+                  key={platform}
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-slate-400 hover:text-white transition-colors text-sm capitalize"
+                >
+                  {platform}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
 
