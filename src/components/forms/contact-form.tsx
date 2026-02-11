@@ -13,8 +13,8 @@ const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email"),
   company: z.string().optional(),
-  service: z.enum(
-    [
+  service: z
+    .enum([
       "web-development",
       "seo",
       "social-media",
@@ -22,9 +22,8 @@ const contactSchema = z.object({
       "finance",
       "multiple",
       "other",
-    ],
-    { required_error: "Please select a service" }
-  ),
+    ])
+    .catch("other"),
   budget: z
     .enum(["<5k", "5k-15k", "15k-50k", "50k+", "not-sure"])
     .optional(),
@@ -88,7 +87,7 @@ export function ContactForm() {
         </div>
         <h3 className="text-xl font-semibold font-jakarta">Message Sent!</h3>
         <p className="text-muted-foreground mt-2 max-w-md mx-auto">
-          Thanks for reaching out. We&apos;ll get back to you within 24 hours.
+          Thanks for reaching out. We will get back to you within 24 hours.
         </p>
         <Button
           variant="outline"
@@ -103,7 +102,6 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
-      {/* Honeypot — hidden from users, catches bots */}
       <input
         type="text"
         {...register("honeypot")}
@@ -113,7 +111,6 @@ export function ContactForm() {
         aria-hidden="true"
       />
 
-      {/* Name & Email */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label className="text-sm font-medium mb-2 block">Name *</label>
@@ -135,24 +132,20 @@ export function ContactForm() {
             className={errors.email ? "border-red-500 focus-visible:ring-red-500" : ""}
           />
           {errors.email && (
-            <p className="text-red-500 text-xs mt-1.5">
-              {errors.email.message}
-            </p>
+            <p className="text-red-500 text-xs mt-1.5">{errors.email.message}</p>
           )}
         </div>
       </div>
 
-      {/* Company */}
       <div>
         <label className="text-sm font-medium mb-2 block">Company</label>
         <Input {...register("company")} placeholder="Your Company" />
       </div>
 
-      {/* Service & Budget */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label className="text-sm font-medium mb-2 block">
-            Service You&apos;re Interested In *
+            Service You are Interested In *
           </label>
           <select
             {...register("service")}
@@ -168,9 +161,7 @@ export function ContactForm() {
             <option value="other">Other / Not Sure</option>
           </select>
           {errors.service && (
-            <p className="text-red-500 text-xs mt-1.5">
-              {errors.service.message}
-            </p>
+            <p className="text-red-500 text-xs mt-1.5">{errors.service.message}</p>
           )}
         </div>
         <div>
@@ -190,7 +181,6 @@ export function ContactForm() {
         </div>
       </div>
 
-      {/* Message */}
       <div>
         <label className="text-sm font-medium mb-2 block">Message *</label>
         <Textarea
@@ -200,13 +190,10 @@ export function ContactForm() {
           className={errors.message ? "border-red-500 focus-visible:ring-red-500" : ""}
         />
         {errors.message && (
-          <p className="text-red-500 text-xs mt-1.5">
-            {errors.message.message}
-          </p>
+          <p className="text-red-500 text-xs mt-1.5">{errors.message.message}</p>
         )}
       </div>
 
-      {/* Error banner */}
       {status === "error" && (
         <div className="flex items-center gap-2 text-red-600 text-sm bg-red-50 p-3 rounded-lg">
           <AlertCircle className="h-4 w-4 shrink-0" />
@@ -214,7 +201,6 @@ export function ContactForm() {
         </div>
       )}
 
-      {/* Submit */}
       <Button
         type="submit"
         size="lg"
@@ -232,7 +218,7 @@ export function ContactForm() {
       </Button>
 
       <p className="text-xs text-muted-foreground text-center">
-        We&apos;ll get back to you within 24 hours. No spam, ever.
+        We will get back to you within 24 hours. No spam, ever.
       </p>
     </form>
   );
