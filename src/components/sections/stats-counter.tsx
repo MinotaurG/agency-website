@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { AnimatedCounter } from "@/components/shared/animated-counter";
+import { ScrollReveal } from "@/components/shared/scroll-reveal";
 
 const stats = [
   { value: "150+", label: "Projects Delivered" },
@@ -15,21 +16,16 @@ export function StatsCounter() {
       <div className="container">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              className="text-center"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <div className="text-4xl sm:text-5xl font-bold text-white font-jakarta">
-                {stat.value}
+            <ScrollReveal key={stat.label} delay={index * 0.1}>
+              <div className="text-center">
+                <div className="text-4xl sm:text-5xl font-bold text-white font-jakarta">
+                  <AnimatedCounter value={stat.value} />
+                </div>
+                <div className="mt-2 text-sm text-primary-foreground/80">
+                  {stat.label}
+                </div>
               </div>
-              <div className="mt-2 text-sm text-primary-foreground/80">
-                {stat.label}
-              </div>
-            </motion.div>
+            </ScrollReveal>
           ))}
         </div>
       </div>
