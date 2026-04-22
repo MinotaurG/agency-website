@@ -21,7 +21,7 @@ export default function ServicesPage() {
             <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">
               Our Services
             </p>
-            <h1 className="text-4xl sm:text-5xl font-bold font-jakarta tracking-tight">
+            <h1 className="text-4xl sm:text-5xl font-bold font-heading tracking-tight">
               Everything You Need to{" "}
               <span className="text-primary">Grow Online</span>
             </h1>
@@ -45,7 +45,7 @@ export default function ServicesPage() {
                 className="group block"
               >
                 <div className="relative rounded-2xl border bg-card p-8 sm:p-10 hover:shadow-lg transition-all duration-300 overflow-hidden">
-                  <div className="absolute top-6 right-8 text-8xl font-bold text-muted/10 font-jakarta select-none">
+                  <div className="absolute top-6 right-8 text-8xl font-bold text-muted/10 font-heading select-none">
                     {String(index + 1).padStart(2, "0")}
                   </div>
 
@@ -60,7 +60,7 @@ export default function ServicesPage() {
                     </div>
 
                     <div className="flex-1">
-                      <h2 className="text-2xl font-bold font-jakarta mb-2 group-hover:text-primary transition-colors">
+                      <h2 className="text-2xl font-bold font-heading mb-2 group-hover:text-primary transition-colors">
                         {service.title}
                       </h2>
                       <p className="text-muted-foreground leading-relaxed max-w-2xl">
@@ -95,7 +95,7 @@ export default function ServicesPage() {
       <section className="py-16 bg-slate-50">
         <div className="container">
           <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-3xl font-bold font-jakarta">
+            <h2 className="text-3xl font-bold font-heading">
               Not Sure What You Need?
             </h2>
             <p className="mt-4 text-muted-foreground text-lg">

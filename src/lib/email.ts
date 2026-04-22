@@ -1,4 +1,5 @@
 import { Resend } from "resend";
+import { siteConfig } from "@/config/site";
 
 // Create Resend client only if API key exists
 const resend = process.env.RESEND_API_KEY
@@ -22,7 +23,7 @@ export async function sendEmail({ to, subject, html }: SendEmailParams) {
 
   try {
     const { data, error } = await resend.emails.send({
-      from: "YourAgency <onboarding@resend.dev>", // Use resend.dev until you have a domain
+      from: `${siteConfig.name} <onboarding@resend.dev>`,
       to,
       subject,
       html,

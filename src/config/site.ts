@@ -1,25 +1,31 @@
 export const siteConfig = {
-  name: "YourAgency",
+  // ✏️ Change these two fields to rebrand the entire site
+  name: "Elevate Strategy",
+  nameHighlight: "Elevate", // the accented/colored part of the name
+  nameSuffix: "Strategy", // the rest of the name
+
+  legalName: "Elevate Strategy Management", // for invoices, contracts, legal docs
   description:
-    "We build websites, grow your SEO, manage social media, and consult on business & finance.",
+    "We help ambitious sports and lifestyle brands bridge the gap between their ground-level impact and their digital presence.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   ogImage: "/images/og-image.jpg",
-  creator: "YourAgency Team",
+  creator: "Elevate Strategy",
   keywords: [
-    "web development agency",
+    "brand strategy agency",
+    "sports brand consulting",
+    "digital marketing India",
+    "website redesign",
     "SEO services",
     "social media management",
-    "business consulting",
-    "finance consultancy",
+    "brand growth partner",
   ],
   links: {
-    twitter: "https://twitter.com/youragency",
-    linkedin: "https://linkedin.com/company/youragency",
-    github: "https://github.com/youragency",
-    instagram: "https://instagram.com/youragency",
+    twitter: "https://twitter.com/elevatestrategy",
+    linkedin: "https://linkedin.com/company/elevatestrategy",
+    instagram: "https://instagram.com/elevatestrategy",
   },
   contact: {
-    email: "hello@youragency.com",
-    phone: "+1 (555) 000-0000",
+    email: "hello@elevatestrategy.in",
+    phone: "+91 XXXXX XXXXX",
   },
 };

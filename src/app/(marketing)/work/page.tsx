@@ -29,7 +29,7 @@ export default function WorkPage() {
             <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">
               Our Work
             </p>
-            <h1 className="text-4xl sm:text-5xl font-bold font-jakarta tracking-tight">
+            <h1 className="text-4xl sm:text-5xl font-bold font-heading tracking-tight">
               Results That{" "}
               <span className="text-primary">Speak for Themselves</span>
             </h1>
@@ -70,7 +70,7 @@ export default function WorkPage() {
                     </div>
 
                     {/* Title & excerpt */}
-                    <h2 className="text-2xl sm:text-3xl font-bold font-jakarta group-hover:text-primary transition-colors">
+                    <h2 className="text-2xl sm:text-3xl font-bold font-heading group-hover:text-primary transition-colors">
                       {study.title}
                     </h2>
                     <p className="mt-2 text-sm text-muted-foreground">
@@ -91,7 +91,7 @@ export default function WorkPage() {
                             {result.metric}
                           </p>
                           <div className="flex items-baseline gap-2">
-                            <span className="text-lg font-bold font-jakarta text-primary">
+                            <span className="text-lg font-bold font-heading text-primary">
                               {result.after}
                             </span>
                           </div>
@@ -119,7 +119,7 @@ export default function WorkPage() {
       <section className="py-16 bg-slate-50">
         <div className="container">
           <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-3xl font-bold font-jakarta">
+            <h2 className="text-3xl font-bold font-heading">
               Want Results Like These?
             </h2>
             <p className="mt-4 text-muted-foreground text-lg">

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter, DM_Sans } from "next/font/google";
 import { siteConfig } from "@/config/site";
 import "./globals.css";
 import { SpeedInsights } from '@vercel/speed-insights/next';
@@ -7,17 +7,19 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
-const jakarta = Plus_Jakarta_Sans({
+const dmSans = DM_Sans({
   subsets: ["latin"],
-  variable: "--font-jakarta",
+  variable: "--font-dm-sans",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} — Full-Service Digital Agency`,
+    default: `${siteConfig.name} — Brand Strategy and Digital Growth`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -67,7 +69,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${jakarta.variable} font-sans antialiased`}
+        className={`${inter.variable} ${dmSans.variable} font-sans antialiased`}
       >
         {children}
         <SpeedInsights />

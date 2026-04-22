@@ -46,7 +46,7 @@ export default function ContactPage() {
             <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">
               Contact Us
             </p>
-            <h1 className="text-4xl sm:text-5xl font-bold font-jakarta tracking-tight">
+            <h1 className="text-4xl sm:text-5xl font-bold font-heading tracking-tight">
               Let&apos;s Build Something{" "}
               <span className="text-primary">Great Together</span>
             </h1>
@@ -66,7 +66,7 @@ export default function ContactPage() {
             {/* Form — takes 2 columns */}
             <div className="lg:col-span-2">
               <div className="bg-card rounded-2xl border p-6 sm:p-8">
-                <h2 className="text-xl font-semibold font-jakarta mb-6">
+                <h2 className="text-xl font-semibold font-heading mb-6">
                   Send Us a Message
                 </h2>
                 <ContactForm />
@@ -77,7 +77,7 @@ export default function ContactPage() {
             <div className="space-y-8">
               {/* Contact details */}
               <div className="bg-card rounded-2xl border p-6">
-                <h3 className="text-lg font-semibold font-jakarta mb-4">
+                <h3 className="text-lg font-semibold font-heading mb-4">
                   Contact Information
                 </h3>
                 <div className="space-y-4">
@@ -108,7 +108,7 @@ export default function ContactPage() {
 
               {/* What to expect */}
               <div className="bg-card rounded-2xl border p-6">
-                <h3 className="text-lg font-semibold font-jakarta mb-4">
+                <h3 className="text-lg font-semibold font-heading mb-4">
                   What to Expect
                 </h3>
                 <ol className="space-y-3">
@@ -130,7 +130,7 @@ export default function ContactPage() {
 
               {/* Social links */}
               <div className="bg-card rounded-2xl border p-6">
-                <h3 className="text-lg font-semibold font-jakarta mb-4">
+                <h3 className="text-lg font-semibold font-heading mb-4">
                   Follow Us
                 </h3>
                 <div className="flex flex-wrap gap-3">

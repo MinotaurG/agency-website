@@ -37,7 +37,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Blog posts from Sanity
   let blogPages: MetadataRoute.Sitemap = [];
   try {
-    const postSlugs = await client.fetch(POST_SLUGS_QUERY);
+    const postSlugs = client ? await client.fetch(POST_SLUGS_QUERY) : [];
     blogPages = postSlugs.map((slug: string) => ({
       url: `${baseUrl}/blog/${slug}`,
       lastModified: new Date(),

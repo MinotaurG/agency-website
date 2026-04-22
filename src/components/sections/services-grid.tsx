@@ -16,7 +16,7 @@ export function ServicesGrid() {
             <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">
               What We Do
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold font-jakarta">
+            <h2 className="text-3xl sm:text-4xl font-bold font-heading">
               Services That Drive Results
             </h2>
             <p className="mt-4 text-muted-foreground text-lg">
@@ -39,7 +39,7 @@ export function ServicesGrid() {
                     <service.icon className="h-6 w-6" />
                   </div>
 
-                  <h3 className="text-xl font-semibold font-jakarta mb-2">
+                  <h3 className="text-xl font-semibold font-heading mb-2">
                     {service.title}
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed mb-4">

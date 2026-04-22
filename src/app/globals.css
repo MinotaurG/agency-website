@@ -1,14 +1,8 @@
 @import "tailwindcss";
 
-/* ============================================
-   Tailwind v4 Theme Configuration
-   Maps CSS variables to Tailwind utilities
-   ============================================ */
-
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  /* Colors — mapped from CSS variables below */
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
   --color-card: hsl(var(--card));
@@ -29,47 +23,38 @@
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
 
-  /* Border Radius */
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 
-  /* Fonts */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-jakarta: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
 }
-
-/* ============================================
-   CSS Variable Definitions (Light Theme)
-   ============================================ */
 
 :root {
-  --background: 0 0% 100%;
-  --foreground: 222.2 84% 4.9%;
+  /* BCG-inspired palette: near-black text, warm neutrals, green accent */
+  --background: 30 14% 95%;
+  --foreground: 210 6% 14%;
   --card: 0 0% 100%;
-  --card-foreground: 222.2 84% 4.9%;
+  --card-foreground: 210 6% 14%;
   --popover: 0 0% 100%;
-  --popover-foreground: 222.2 84% 4.9%;
-  --primary: 221.2 83.2% 53.3%;
-  --primary-foreground: 210 40% 98%;
-  --secondary: 210 40% 96.1%;
-  --secondary-foreground: 222.2 47.4% 11.2%;
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215.4 16.3% 46.9%;
-  --accent: 210 40% 96.1%;
-  --accent-foreground: 222.2 47.4% 11.2%;
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 210 40% 98%;
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
-  --ring: 221.2 83.2% 53.3%;
-  --radius: 0.5rem;
+  --popover-foreground: 210 6% 14%;
+  --primary: 138 72% 44%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 30 14% 93%;
+  --secondary-foreground: 210 6% 14%;
+  --muted: 30 10% 93%;
+  --muted-foreground: 210 4% 42%;
+  --accent: 105 90% 70%;
+  --accent-foreground: 210 6% 14%;
+  --destructive: 4 84% 47%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 30 10% 83%;
+  --input: 30 10% 83%;
+  --ring: 138 72% 44%;
+  --radius: 0.75rem;
 }
-
-/* ============================================
-   Base Styles
-   ============================================ */
 
 *,
 *::before,
@@ -81,26 +66,27 @@ body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
   font-family: var(--font-sans);
+  font-weight: 300;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-jakarta);
+  font-family: var(--font-heading);
+  font-weight: 700;
 }
-
-/* ============================================
-   Custom Utilities
-   ============================================ */
 
 @utility container {
   margin-inline: auto;
   padding-inline: 1rem;
   max-width: 80rem;
-  
+
   @media (min-width: 640px) {
     padding-inline: 1.5rem;
   }
   @media (min-width: 1024px) {
     padding-inline: 2rem;
+  }
+  @media (min-width: 1440px) {
+    padding-inline: 5rem;
   }
 }
 
@@ -108,16 +94,12 @@ h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
 
-/* ============================================
-   Smooth Scrolling & Custom Scrollbar
-   ============================================ */
-
 html {
   scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -125,10 +107,10 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--muted-foreground) / 0.3);
-  border-radius: 4px;
+  background: hsl(var(--muted-foreground) / 0.2);
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--muted-foreground) / 0.5);
+  background: hsl(var(--muted-foreground) / 0.4);
 }

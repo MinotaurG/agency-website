@@ -21,7 +21,7 @@ export default function Error({
       <div className="container">
         <div className="max-w-lg mx-auto text-center">
           <div className="text-6xl mb-4">⚠️</div>
-          <h1 className="text-3xl sm:text-4xl font-bold font-jakarta">
+          <h1 className="text-3xl sm:text-4xl font-bold font-heading">
             Something Went Wrong
           </h1>
           <p className="mt-4 text-muted-foreground text-lg leading-relaxed">

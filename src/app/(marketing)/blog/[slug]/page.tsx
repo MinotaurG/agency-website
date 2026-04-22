@@ -18,7 +18,7 @@ import { formatDate } from "@/lib/utils";
 export const revalidate = 60;
 
 export async function generateStaticParams() {
-  const slugs = await client.fetch(POST_SLUGS_QUERY);
+  const slugs = await client?.fetch(POST_SLUGS_QUERY) ?? [];
   return slugs.map((slug: string) => ({ slug }));
 }
 
@@ -28,7 +28,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const post = await client.fetch(POST_BY_SLUG_QUERY, { slug });
+  const post = await client?.fetch(POST_BY_SLUG_QUERY, { slug });
 
   if (!post) return { title: "Post Not Found" };
 
@@ -59,13 +59,13 @@ export default async function BlogPostPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = await client.fetch(POST_BY_SLUG_QUERY, { slug });
+  const post = await client?.fetch(POST_BY_SLUG_QUERY, { slug });
 
   if (!post) {
     notFound();
   }
 
-  const recentPosts = await client.fetch(RECENT_POSTS_QUERY);
+  const recentPosts = await client?.fetch(RECENT_POSTS_QUERY) ?? [];
   const otherPosts = recentPosts.filter(
     (p: any) => p.slug?.current !== slug
   );
@@ -95,7 +95,7 @@ export default async function BlogPostPage({
               </div>
             )}
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-jakarta tracking-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading tracking-tight">
               {post.title}
             </h1>
 
@@ -163,7 +163,7 @@ export default async function BlogPostPage({
         <section className="py-16 bg-slate-50">
           <div className="container">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-2xl font-bold font-jakarta mb-8">
+              <h2 className="text-2xl font-bold font-heading mb-8">
                 More Posts
               </h2>
               <div className="space-y-6">
@@ -186,7 +186,7 @@ export default async function BlogPostPage({
                       />
                     )}
                     <div>
-                      <h3 className="font-semibold font-jakarta group-hover:text-primary transition-colors">
+                      <h3 className="font-semibold font-heading group-hover:text-primary transition-colors">
                         {other.title}
                       </h3>
                       {other.excerpt && (
@@ -212,7 +212,7 @@ export default async function BlogPostPage({
       <section className="py-16 bg-white">
         <div className="container">
           <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-3xl font-bold font-jakarta">
+            <h2 className="text-3xl font-bold font-heading">
               Need Help With Your Project?
             </h2>
             <p className="mt-4 text-muted-foreground text-lg">

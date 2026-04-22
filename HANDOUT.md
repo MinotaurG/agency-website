@@ -294,9 +294,7 @@ Flow:
 5. **Free tools only** — no paid services until the agency has paying clients
 6. **Explain why** — I want to learn, not just copy-paste
 7. **Fix issues immediately** — don't skip errors, resolve before moving on
-8. **OS:** Arch Linux on WSL2 (Windows)
-9. **Browser:** Windows Firefox (via \$BROWSER env var for WSL)
-10. **Editor:** VS Code
+8. **OS:** macOS
 11. **Shell:** zsh
 12. **Package manager:** pnpm (NOT npm or yarn)
 13. **GitHub username:** MinotaurG

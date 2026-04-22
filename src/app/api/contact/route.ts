@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { siteConfig } from "@/config/site";
 import { rateLimit } from "@/lib/rate-limit";
 import { sendEmail } from "@/lib/email";
 import { supabaseAdmin } from "@/lib/supabase/server";
@@ -9,11 +10,11 @@ const contactSchema = z.object({
   email: z.string().email(),
   company: z.string().optional(),
   service: z.enum([
+    "brand-strategy",
     "web-development",
-    "seo",
-    "social-media",
-    "business-development",
-    "finance",
+    "digital-marketing",
+    "legal-compliance",
+    "pr-communications",
     "multiple",
     "other",
   ]),
@@ -75,7 +76,7 @@ export async function POST(req: Request) {
     }
 
     await sendEmail({
-      to: ["your-email@gmail.com"],
+      to: [siteConfig.contact.email],
       subject: `🔔 New Lead: ${data.name} — ${data.service}`,
       html: `
         <h2>New Contact Form Submission</h2>
@@ -92,7 +93,7 @@ export async function POST(req: Request) {
 
     await sendEmail({
       to: [data.email],
-      subject: "We received your message — YourAgency",
+      subject: `We received your message — ${siteConfig.name}`,
       html: `
         <h2>Thanks for reaching out, ${data.name}!</h2>
         <p>We have received your message and a team member will get back to you within 24 hours.</p>
@@ -103,7 +104,7 @@ export async function POST(req: Request) {
           <li>We will discuss your goals and prepare a proposal</li>
         </ol>
         <br/>
-        <p>Best regards,<br/><strong>The YourAgency Team</strong></p>
+        <p>Best regards,<br/><strong>The ${siteConfig.name} Team</strong></p>
       `,
     });
 

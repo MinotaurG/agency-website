@@ -31,14 +31,14 @@ export function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
-          ? "bg-white/80 backdrop-blur-lg border-b shadow-sm"
+          ? "bg-[hsl(var(--background))]/80 backdrop-blur-lg border-b shadow-sm"
           : "bg-transparent"
       )}
     >
       <nav className="container h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="text-xl font-bold font-jakarta">
-          <span className="text-primary">Your</span>Agency
+        <Link href="/" className="text-xl font-bold font-heading tracking-tight">
+          <span className="text-primary">{siteConfig.nameHighlight}</span>{siteConfig.nameSuffix}
         </Link>
 
         {/* Desktop Navigation */}
@@ -91,7 +91,7 @@ export function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden md:block">
-          <Button asChild>
+          <Button asChild className="text-xs font-bold uppercase tracking-wider rounded-2xl">
             <Link href="/contact">
               Free Consultation
               <ArrowRight className="ml-2 h-4 w-4" />
@@ -108,7 +108,7 @@ export function Navbar() {
           </SheetTrigger>
           <SheetContent side="right" className="w-[300px]">
             <SheetTitle className="text-left">
-              <span className="text-primary">Your</span>Agency
+              <span className="text-primary">{siteConfig.nameHighlight}</span>{siteConfig.nameSuffix}
             </SheetTitle>
             <div className="flex flex-col gap-2 mt-8">
               {mainNav.map((item) => (

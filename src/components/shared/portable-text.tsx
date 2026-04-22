@@ -30,16 +30,16 @@ const components: PortableTextComponents = {
   },
   block: {
     h1: ({ children }) => (
-      <h1 className="text-4xl font-bold font-jakarta mt-12 mb-4">{children}</h1>
+      <h1 className="text-4xl font-bold font-heading mt-12 mb-4">{children}</h1>
     ),
     h2: ({ children }) => (
-      <h2 className="text-3xl font-bold font-jakarta mt-10 mb-3">{children}</h2>
+      <h2 className="text-3xl font-bold font-heading mt-10 mb-3">{children}</h2>
     ),
     h3: ({ children }) => (
-      <h3 className="text-2xl font-semibold font-jakarta mt-8 mb-3">{children}</h3>
+      <h3 className="text-2xl font-semibold font-heading mt-8 mb-3">{children}</h3>
     ),
     h4: ({ children }) => (
-      <h4 className="text-xl font-semibold font-jakarta mt-6 mb-2">{children}</h4>
+      <h4 className="text-xl font-semibold font-heading mt-6 mb-2">{children}</h4>
     ),
     normal: ({ children }) => (
       <p className="text-muted-foreground leading-relaxed mb-4">{children}</p>

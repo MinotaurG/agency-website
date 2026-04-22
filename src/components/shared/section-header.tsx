@@ -22,7 +22,7 @@ export function SectionHeader({
           {label}
         </p>
       )}
-      <h2 className="text-3xl sm:text-4xl font-bold font-jakarta">{title}</h2>
+      <h2 className="text-3xl sm:text-4xl font-bold font-heading">{title}</h2>
       {description && (
         <p className="mt-4 text-muted-foreground text-lg leading-relaxed">
           {description}

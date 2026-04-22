@@ -61,7 +61,7 @@ export default async function ServiceDetailPage({
             <div className={cn("inline-flex items-center justify-center w-16 h-16 rounded-2xl mt-6 mb-4", service.color)}>
               <service.icon className="h-8 w-8" />
             </div>
-            <h1 className="text-4xl sm:text-5xl font-bold font-jakarta tracking-tight">{service.title}</h1>
+            <h1 className="text-4xl sm:text-5xl font-bold font-heading tracking-tight">{service.title}</h1>
             <p className="mt-4 text-lg text-muted-foreground leading-relaxed max-w-2xl">{service.longDescription}</p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Button size="lg" asChild className="text-base px-8 h-12">
@@ -80,7 +80,7 @@ export default async function ServiceDetailPage({
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {service.stats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-white font-jakarta">{stat.value}</div>
+                <div className="text-3xl sm:text-4xl font-bold text-white font-heading">{stat.value}</div>
                 <div className="mt-1 text-sm text-primary-foreground/80">{stat.label}</div>
               </div>
             ))}
@@ -96,7 +96,7 @@ export default async function ServiceDetailPage({
               <div key={feature.title} className="p-6 rounded-2xl border bg-card hover:shadow-md transition-shadow">
                 <div className="flex items-start gap-3 mb-3">
                   <div className="mt-1"><CheckCircle className="h-5 w-5 text-primary" /></div>
-                  <h3 className="text-lg font-semibold font-jakarta">{feature.title}</h3>
+                  <h3 className="text-lg font-semibold font-heading">{feature.title}</h3>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed ml-8">{feature.description}</p>
               </div>
@@ -114,7 +114,7 @@ export default async function ServiceDetailPage({
                 {index < service.process.length - 1 && (<div className="absolute left-[19px] top-10 bottom-0 w-px bg-border" />)}
                 <div className="relative z-10 flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-sm shrink-0">{step.step}</div>
                 <div className="pt-1">
-                  <h3 className="text-lg font-semibold font-jakarta mb-1">{step.title}</h3>
+                  <h3 className="text-lg font-semibold font-heading mb-1">{step.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{step.description}</p>
                 </div>
               </div>
@@ -129,7 +129,7 @@ export default async function ServiceDetailPage({
           <div className="max-w-3xl mx-auto space-y-6">
             {service.faqs.map((faq) => (
               <div key={faq.question} className="p-6 rounded-2xl border bg-card">
-                <h3 className="text-base font-semibold font-jakarta mb-2">{faq.question}</h3>
+                <h3 className="text-base font-semibold font-heading mb-2">{faq.question}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{faq.answer}</p>
               </div>
             ))}
@@ -146,7 +146,7 @@ export default async function ServiceDetailPage({
                 <div className={cn("inline-flex items-center justify-center w-10 h-10 rounded-lg mb-3", other.color)}>
                   <other.icon className="h-5 w-5" />
                 </div>
-                <h3 className="font-semibold font-jakarta group-hover:text-primary transition-colors">{other.title}</h3>
+                <h3 className="font-semibold font-heading group-hover:text-primary transition-colors">{other.title}</h3>
                 <p className="mt-1 text-sm text-muted-foreground line-clamp-2">{other.description}</p>
               </Link>
             ))}
@@ -159,7 +159,7 @@ export default async function ServiceDetailPage({
           <div className="relative rounded-3xl bg-gradient-to-br from-primary to-blue-700 p-12 sm:p-16 text-center overflow-hidden">
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff10_1px,transparent_1px),linear-gradient(to_bottom,#ffffff10_1px,transparent_1px)] bg-[size:24px_24px]" />
             <div className="relative z-10">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white font-jakarta">Ready to Get Started with {service.title}?</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold text-white font-heading">Ready to Get Started with {service.title}?</h2>
               <p className="mt-4 text-lg text-white/80 max-w-2xl mx-auto">Book a free consultation and let us discuss how we can help your business grow.</p>
               <Button size="lg" variant="secondary" asChild className="mt-8 text-base px-8 h-12">
                 <Link href="/contact">Get Free Consultation<ArrowRight className="ml-2 h-4 w-4" /></Link>

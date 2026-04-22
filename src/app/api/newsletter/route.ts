@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { siteConfig } from "@/config/site";
 import { rateLimit } from "@/lib/rate-limit";
 import { sendEmail } from "@/lib/email";
 import { supabaseAdmin } from "@/lib/supabase/server";
@@ -58,13 +59,13 @@ export async function POST(req: Request) {
     // 5. Send welcome email
     await sendEmail({
       to: [email],
-      subject: "Welcome to the YourAgency Newsletter!",
+      subject: `Welcome to the ${siteConfig.name} Newsletter!`,
       html: `
         <h2>Thanks for subscribing!</h2>
-        <p>You will receive our latest insights on web development, SEO, social media, and business growth.</p>
+        <p>You will receive our latest insights on brand strategy, digital marketing, and business growth.</p>
         <p>We send 1-2 emails per month — no spam, ever.</p>
         <br/>
-        <p>Best regards,<br/><strong>The YourAgency Team</strong></p>
+        <p>Best regards,<br/><strong>The ${siteConfig.name} Team</strong></p>
       `,
     });
 

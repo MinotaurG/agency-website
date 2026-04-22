@@ -20,7 +20,7 @@ export function ProcessSteps() {
             <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">
               How We Work
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold font-jakarta">
+            <h2 className="text-3xl sm:text-4xl font-bold font-heading">
               Our Proven Process
             </h2>
             <p className="mt-4 text-muted-foreground text-lg">
@@ -33,13 +33,13 @@ export function ProcessSteps() {
           {steps.map((step, index) => (
             <ScrollReveal key={step.title} delay={index * 0.1}>
               <div className="relative text-center">
-                <div className="text-6xl font-bold text-muted/30 font-jakarta mb-2">
+                <div className="text-6xl font-bold text-muted/30 font-heading mb-2">
                   {String(index + 1).padStart(2, "0")}
                 </div>
                 <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-primary/10 text-primary mb-4">
                   <step.icon className="h-7 w-7" />
                 </div>
-                <h3 className="text-lg font-semibold font-jakarta mb-2">
+                <h3 className="text-lg font-semibold font-heading mb-2">
                   {step.title}
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">

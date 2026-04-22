@@ -6,31 +6,27 @@ import { NewsletterForm } from "@/components/forms/newsletter-form";
 
 export function Footer() {
   return (
-    <footer className="bg-slate-950 text-slate-300">
+    <footer className="bg-foreground text-white/60">
       <div className="container py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
-          {/* Brand + Newsletter */}
           <div className="lg:col-span-2">
-            <Link href="/" className="text-xl font-bold font-jakarta text-white">
-              <span className="text-primary">Your</span>Agency
+            <Link href="/" className="text-xl font-bold font-heading tracking-tight text-white">
+              <span className="text-primary">{siteConfig.nameHighlight}</span>{siteConfig.nameSuffix}
             </Link>
-            <p className="mt-4 text-sm text-slate-400 leading-relaxed">
-              Your all-in-one growth partner. We build, optimize, and scale
-              your digital presence.
+            <p className="mt-4 text-sm text-white/40 leading-relaxed">
+              We help ambitious brands bridge the gap between their
+              ground-level impact and their digital presence.
             </p>
-
-            {/* Newsletter */}
             <div className="mt-6">
-              <h3 className="text-sm font-semibold text-white mb-3">
+              <h3 className="text-sm font-bold uppercase tracking-wider text-white mb-3">
                 Stay Updated
               </h3>
               <NewsletterForm variant="dark" />
             </div>
           </div>
 
-          {/* Services */}
           <div>
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+            <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-4">
               Services
             </h3>
             <ul className="space-y-3">
@@ -38,7 +34,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-slate-400 hover:text-white transition-colors"
+                    className="text-sm text-white/40 hover:text-white transition-colors"
                   >
                     {link.title}
                   </Link>
@@ -47,9 +43,8 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Company */}
           <div>
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+            <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-4">
               Company
             </h3>
             <ul className="space-y-3">
@@ -57,7 +52,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-slate-400 hover:text-white transition-colors"
+                    className="text-sm text-white/40 hover:text-white transition-colors"
                   >
                     {link.title}
                   </Link>
@@ -66,12 +61,11 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+            <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-4">
               Get In Touch
             </h3>
-            <ul className="space-y-3 text-sm text-slate-400">
+            <ul className="space-y-3 text-sm text-white/40">
               <li>
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
@@ -96,7 +90,7 @@ export function Footer() {
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-400 hover:text-white transition-colors text-sm capitalize"
+                  className="text-white/40 hover:text-white transition-colors text-sm capitalize"
                 >
                   {platform}
                 </a>
@@ -105,18 +99,18 @@ export function Footer() {
           </div>
         </div>
 
-        <Separator className="my-8 bg-slate-800" />
+        <Separator className="my-8 bg-white/10" />
 
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-slate-500">
-            © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
+          <p className="text-xs text-white/30">
+            &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
           </p>
           <div className="flex gap-6">
             {footerNav.legal.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-xs text-slate-500 hover:text-slate-300 transition-colors"
+                className="text-xs text-white/30 hover:text-white/60 transition-colors"
               >
                 {link.title}
               </Link>

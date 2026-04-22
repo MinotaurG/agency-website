@@ -79,7 +79,7 @@ export default async function CaseStudyDetailPage({
               ))}
             </div>
 
-            <h1 className="text-4xl sm:text-5xl font-bold font-jakarta tracking-tight">
+            <h1 className="text-4xl sm:text-5xl font-bold font-heading tracking-tight">
               {study.title}
             </h1>
             <p className="mt-2 text-lg text-muted-foreground">
@@ -104,7 +104,7 @@ export default async function CaseStudyDetailPage({
                 <div className="text-sm text-primary-foreground/70 mb-1">
                   {result.metric}
                 </div>
-                <div className="text-3xl sm:text-4xl font-bold text-white font-jakarta">
+                <div className="text-3xl sm:text-4xl font-bold text-white font-heading">
                   {result.after}
                 </div>
                 <div className="text-sm text-primary-foreground/60 mt-1">
@@ -124,7 +124,7 @@ export default async function CaseStudyDetailPage({
               <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">
                 The Challenge
               </p>
-              <h2 className="text-3xl font-bold font-jakarta mb-4">
+              <h2 className="text-3xl font-bold font-heading mb-4">
                 What They Were Facing
               </h2>
               <p className="text-muted-foreground leading-relaxed text-lg">
@@ -136,7 +136,7 @@ export default async function CaseStudyDetailPage({
               <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">
                 Our Solution
               </p>
-              <h2 className="text-3xl font-bold font-jakarta mb-4">
+              <h2 className="text-3xl font-bold font-heading mb-4">
                 How We Solved It
               </h2>
               <p className="text-muted-foreground leading-relaxed text-lg">
@@ -187,7 +187,7 @@ export default async function CaseStudyDetailPage({
                   <p className="text-sm text-muted-foreground line-through">
                     {result.before}
                   </p>
-                  <p className="text-3xl font-bold font-jakarta text-primary">
+                  <p className="text-3xl font-bold font-heading text-primary">
                     {result.after}
                   </p>
                 </div>
@@ -203,7 +203,7 @@ export default async function CaseStudyDetailPage({
           <div className="container">
             <div className="max-w-3xl mx-auto text-center">
               <Quote className="h-12 w-12 text-primary/20 mx-auto mb-6" />
-              <blockquote className="text-2xl sm:text-3xl font-medium font-jakarta leading-snug text-foreground">
+              <blockquote className="text-2xl sm:text-3xl font-medium font-heading leading-snug text-foreground">
                 &ldquo;{study.testimonial.quote}&rdquo;
               </blockquote>
               <div className="mt-8">
@@ -238,7 +238,7 @@ export default async function CaseStudyDetailPage({
                     {other.industry}
                   </Badge>
                 </div>
-                <h3 className="font-semibold font-jakarta group-hover:text-primary transition-colors line-clamp-2">
+                <h3 className="font-semibold font-heading group-hover:text-primary transition-colors line-clamp-2">
                   {other.title}
                 </h3>
                 <p className="mt-1 text-sm text-muted-foreground">
@@ -263,7 +263,7 @@ export default async function CaseStudyDetailPage({
           <div className="relative rounded-3xl bg-gradient-to-br from-primary to-blue-700 p-12 sm:p-16 text-center overflow-hidden">
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff10_1px,transparent_1px),linear-gradient(to_bottom,#ffffff10_1px,transparent_1px)] bg-[size:24px_24px]" />
             <div className="relative z-10">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white font-jakarta">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white font-heading">
                 Want Similar Results?
               </h2>
               <p className="mt-4 text-lg text-white/80 max-w-2xl mx-auto">

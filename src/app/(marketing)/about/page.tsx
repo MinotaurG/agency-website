@@ -44,7 +44,7 @@ export default function AboutPage() {
         <div className="container">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">About Us</p>
-            <h1 className="text-4xl sm:text-5xl font-bold font-jakarta tracking-tight">
+            <h1 className="text-4xl sm:text-5xl font-bold font-heading tracking-tight">
               We are a Team That <span className="text-primary">Actually Cares</span> About Your Growth
             </h1>
             <p className="mt-4 text-lg text-muted-foreground leading-relaxed max-w-2xl">
@@ -59,7 +59,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
               <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">Our Story</p>
-              <h2 className="text-3xl sm:text-4xl font-bold font-jakarta">Born From Frustration, Built on Results</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold font-heading">Born From Frustration, Built on Results</h2>
               <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
                 <p>We started this agency because we saw too many businesses getting burned by agencies that overpromise and underdeliver. Flashy proposals, mediocre execution, and zero accountability.</p>
                 <p>We knew there had to be a better way. So we built an agency around a simple principle: <strong className="text-foreground">deliver real results, or do not bother.</strong></p>
@@ -75,7 +75,7 @@ export default function AboutPage() {
                   { value: "5+", label: "Years of Experience" },
                 ].map((stat) => (
                   <div key={stat.label}>
-                    <div className="text-3xl sm:text-4xl font-bold font-jakarta text-primary">{stat.value}</div>
+                    <div className="text-3xl sm:text-4xl font-bold font-heading text-primary">{stat.value}</div>
                     <div className="mt-1 text-sm text-muted-foreground">{stat.label}</div>
                   </div>
                 ))}
@@ -94,7 +94,7 @@ export default function AboutPage() {
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                   <value.icon className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-lg font-semibold font-jakarta mb-2">{value.title}</h3>
+                <h3 className="text-lg font-semibold font-heading mb-2">{value.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{value.description}</p>
               </div>
             ))}
@@ -113,7 +113,7 @@ export default function AboutPage() {
                 )}
                 <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white font-bold text-xs shrink-0">{milestone.year}</div>
                 <div className="pt-2">
-                  <h3 className="text-lg font-semibold font-jakarta">{milestone.title}</h3>
+                  <h3 className="text-lg font-semibold font-heading">{milestone.title}</h3>
                   <p className="mt-1 text-muted-foreground">{milestone.description}</p>
                 </div>
               </div>
@@ -129,11 +129,11 @@ export default function AboutPage() {
             {team.map((member) => (
               <div key={member.name} className="bg-white rounded-2xl border p-6 text-center hover:shadow-md transition-shadow">
                 <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-primary font-jakarta">
+                  <span className="text-2xl font-bold text-primary font-heading">
                     {member.name.split(" ").map((n) => n[0]).join("")}
                   </span>
                 </div>
-                <h3 className="text-lg font-semibold font-jakarta">{member.name}</h3>
+                <h3 className="text-lg font-semibold font-heading">{member.name}</h3>
                 <p className="text-sm text-primary font-medium mt-0.5">{member.role}</p>
                 <p className="text-sm text-muted-foreground mt-3 leading-relaxed">{member.bio}</p>
               </div>
@@ -147,7 +147,7 @@ export default function AboutPage() {
           <div className="relative rounded-3xl bg-gradient-to-br from-primary to-blue-700 p-12 sm:p-16 text-center overflow-hidden">
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff10_1px,transparent_1px),linear-gradient(to_bottom,#ffffff10_1px,transparent_1px)] bg-[size:24px_24px]" />
             <div className="relative z-10">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white font-jakarta">Want to Work With Us?</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold text-white font-heading">Want to Work With Us?</h2>
               <p className="mt-4 text-lg text-white/80 max-w-2xl mx-auto">We are always looking for exciting projects and great people to work with.</p>
               <Button size="lg" variant="secondary" asChild className="mt-8 text-base px-8 h-12">
                 <Link href="/contact">
