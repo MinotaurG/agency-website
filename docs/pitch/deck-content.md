@@ -273,6 +273,7 @@ Case Study: **finder.io** — We built an ML-powered SEO strategy that tripled s
 - Remove jewelry template categories from homepage
 - Draft proper legal policies (our partner is a High Court advocate)
 - Basic SEO fixes — meta tags, alt text, page titles
+- Clean URL structure — /subcategory/bat → /shop/bats (better for SEO and customers)
 - YouTube channel optimization — description, links, cross-promotion
 
 **Phase 2: Brand Transformation (Month 1-2)**
