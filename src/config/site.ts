@@ -25,7 +25,7 @@ export const siteConfig = {
     instagram: "https://instagram.com/elevatestrategy",
   },
   contact: {
-    email: "hello@elevatestrategy.in",
+    email: "hello@elevatestrategy.co.in",
     phone: "+91 XXXXX XXXXX",
   },
 };

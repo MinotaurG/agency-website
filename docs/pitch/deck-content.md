@@ -33,7 +33,7 @@ Advises businesses on forward-looking strategy — not just legal fixes.
 
 **What we do:** Brand strategy, web development, SEO, social media, AI-powered solutions.
 
-**Proof:** Visit elevatestrategy.com (or show live demo)
+**Proof:** Visit elevatestrategy.co.in (or show live demo)
 
 ---
 
@@ -252,7 +252,7 @@ Know which products are trending, which content drives sales, and where to inves
 
 ### We Practice What We Preach
 
-*(Show live demo of elevatestrategy.com)*
+*(Show live demo of elevatestrategy.co.in)*
 
 - Built with the same technology we would use for SD18 (Next.js, React)
 - Fast, modern, mobile-first
@@ -327,8 +327,8 @@ We would rather show you what we can do than talk about it.
 # Let us make sure they see the real SD18.
 
 **Elevate Strategy**
-elevatestrategy.com
-hello@elevatestrategy.in
+elevatestrategy.co.in
+hello@elevatestrategy.co.in
 
 Aditya Shubham | Adam Khan
 
