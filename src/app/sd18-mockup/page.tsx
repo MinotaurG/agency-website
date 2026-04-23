@@ -117,6 +117,59 @@ function IconFacebook({ className = "w-5 h-5" }: { className?: string }) {
   );
 }
 
+function IconBall({ className = "w-6 h-6" }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+      <circle cx="12" cy="12" r="9.5" />
+      <path strokeLinecap="round" d="M6.5 4.5c2 3 2 8.5 0 15M17.5 4.5c-2 3-2 8.5 0 15" />
+    </svg>
+  );
+}
+
+function IconGlove({ className = "w-6 h-6" }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M10 2.5v5M7.5 3v4M12.5 3v4M15 4v3M6 8c-1.5 0-3 1-3 3v4c0 3 2 5.5 5 6.5h4c3-1 5-3.5 5-6.5v-4c0-1.5-.5-2.5-2-3l-1 3.5L12 9l-2 2.5L9 8z" />
+    </svg>
+  );
+}
+
+function IconLegGuard({ className = "w-6 h-6" }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+      <rect x="7" y="2" width="10" height="20" rx="3" />
+      <path strokeLinecap="round" d="M10 6h4M10 10h4M10 14h4M10 18h4" />
+    </svg>
+  );
+}
+
+function IconBag({ className = "w-6 h-6" }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M4 7h16l-1.5 13a2 2 0 01-2 1.75h-9A2 2 0 015.5 20L4 7z" />
+      <path strokeLinecap="round" d="M8 7V5a4 4 0 018 0v2" />
+      <path strokeLinecap="round" d="M10 11v4M14 11v4" />
+    </svg>
+  );
+}
+
+function IconTShirt({ className = "w-6 h-6" }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M8 2l-5 4 2 3 3-1.5V21h8V7.5L19 9l2-3-5-4c0 0-1.5 2-4 2s-4-2-4-2z" />
+    </svg>
+  );
+}
+
+const categoryIcons: Record<string, React.ComponentType<{ className?: string }>> = {
+  bats: IconCricketBat,
+  balls: IconBall,
+  gloves: IconGlove,
+  "leg-guards": IconLegGuard,
+  bags: IconBag,
+  sportswear: IconTShirt,
+};
+
 function IconCricketBat({ className = "w-8 h-8" }: { className?: string }) {
   return (
     <svg className={className} fill="none" viewBox="0 0 40 40" stroke="currentColor" strokeWidth={1.5}>
@@ -436,9 +489,10 @@ export default function SD18MockupPage() {
                       backgroundColor: activeCategory === i ? `${colors.red}30` : `${colors.navy}15`,
                     }}
                   >
-                    <IconCricketBat
-                      className="w-6 h-6"
-                    />
+                    {(() => {
+                      const Icon = categoryIcons[product.slug] || IconCricketBat;
+                      return <Icon className="w-6 h-6" />;
+                    })()}
                   </div>
                   <div
                     className="font-bold text-sm sm:text-base transition-colors"
