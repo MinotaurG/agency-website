@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1280">
+<title>SD18 Sports — Brand Audit & Growth Roadmap | Elevate Strategy</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --dark: #0f172a;
+    --dark2: #1e293b;
+    --navy: #0d4862;
+    --green: #16a34a;
+    --green-light: #f0fdf4;
+    --green-dim: #dcfce7;
+    --red: #dc2626;
+    --red-light: #fef2f2;
+    --red-dim: #fecaca;
+    --orange: #f59e0b;
+    --cream: #faf8f5;
+    --gray-50: #f8fafc;
+    --gray-100: #f1f5f9;
+    --gray-200: #e2e8f0;
+    --gray-300: #cbd5e1;
+    --gray-400: #94a3b8;
+    --gray-500: #64748b;
+    --gray-600: #475569;
+    --gray-700: #334155;
+    --gray-800: #1e293b;
+    --text: #1e293b;
+    --text-muted: #64748b;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; font-weight: 300; color: var(--text); }
+  .slide {
+    width: 1280px; height: 720px;
+    padding: 56px 64px;
+    page-break-after: always;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .slide:last-child { page-break-after: avoid; }
+  h1 { font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 40px; line-height: 1.15; color: var(--text); }
+  h2 { font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 28px; line-height: 1.2; color: var(--text); }
+  h3 { font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 18px; line-height: 1.3; color: var(--text); }
+  p { font-size: 14px; line-height: 1.7; color: var(--gray-600); }
+  .label {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--green); margin-bottom: 8px; display: inline-block;
+  }
+  .label-red { color: var(--red); }
+  .subtitle { font-size: 16px; color: var(--gray-500); font-weight: 300; margin-top: 4px; }
+  .cols { display: flex; gap: 32px; flex: 1; }
+  .cols-tight { gap: 20px; }
+  .col { flex: 1; display: flex; flex-direction: column; }
+  .card {
+    background: white; border: 1px solid var(--gray-200); border-radius: 12px;
+    padding: 24px; position: relative;
+  }
+  .card-sm { padding: 16px 20px; }
+  .card-dark { background: var(--dark); border-color: var(--dark2); color: white; }
+  .card-green { background: var(--green-light); border-color: var(--green-dim); }
+  .card-red { background: var(--red-light); border-color: var(--red-dim); }
+  .card-cream { background: var(--cream); border-color: var(--gray-200); }
+  .big-num {
+    font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 48px;
+    line-height: 1; color: var(--green);
+  }
+  .big-num-red { color: var(--red); }
+  .big-num-navy { color: var(--navy); }
+  .big-num-sm { font-size: 36px; }
+  .tag {
+    display: inline-block; padding: 3px 10px; border-radius: 6px;
+    font-size: 10px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;
+  }
+  .tag-green { background: var(--green-dim); color: var(--green); }
+  .tag-red { background: var(--red-dim); color: var(--red); }
+  .tag-orange { background: #fef3c7; color: #b45309; }
+  .tag-gray { background: var(--gray-100); color: var(--gray-500); }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  th {
+    text-align: left; padding: 10px 14px; font-weight: 600; font-size: 11px;
+    letter-spacing: 0.05em; text-transform: uppercase; color: var(--gray-500);
+    background: var(--gray-50); border-bottom: 2px solid var(--gray-200);
+  }
+  td {
+    padding: 10px 14px; border-bottom: 1px solid var(--gray-100);
+    color: var(--gray-600); vertical-align: top;
+  }
+  td strong { color: var(--text); font-weight: 600; }
+  .bar { height: 8px; border-radius: 4px; background: var(--gray-100); margin-top: 6px; }
+  .bar-fill { height: 100%; border-radius: 4px; }
+  .bar-green { background: var(--green); }
+  .bar-red { background: var(--red); }
+  .bar-orange { background: var(--orange); }
+  .divider { height: 1px; background: var(--gray-200); margin: 16px 0; }
+  .spacer { flex: 1; }
+  .footer-brand {
+    position: absolute; bottom: 20px; right: 40px;
+    font-size: 10px; color: var(--gray-400); font-weight: 400;
+    letter-spacing: 0.05em;
+  }
+  .page-num {
+    position: absolute; bottom: 20px; left: 40px;
+    font-size: 10px; color: var(--gray-400);
+  }
+  .quote {
+    border-left: 3px solid var(--green); padding-left: 16px;
+    font-style: italic; color: var(--gray-500); font-size: 14px; line-height: 1.7;
+  }
+  .quote-red { border-left-color: var(--red); }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+  .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 16px; }
+  .mt-auto { margin-top: auto; }
+  .mt-8 { margin-top: 8px; }
+  .mt-12 { margin-top: 12px; }
+  .mt-16 { margin-top: 16px; }
+  .mt-20 { margin-top: 20px; }
+  .mt-24 { margin-top: 24px; }
+  .mb-4 { margin-bottom: 4px; }
+  .mb-8 { margin-bottom: 8px; }
+  .mb-12 { margin-bottom: 12px; }
+  .mb-16 { margin-bottom: 16px; }
+  .mb-24 { margin-bottom: 24px; }
+  .gap-12 { gap: 12px; }
+  .gap-16 { gap: 16px; }
+  .text-xs { font-size: 11px; }
+  .text-sm { font-size: 13px; }
+  .text-white { color: white; }
+  .text-muted { color: var(--gray-400); }
+  .text-green { color: var(--green); }
+  .text-red { color: var(--red); }
+  .fw-400 { font-weight: 400; }
+  .fw-500 { font-weight: 500; }
+  .fw-600 { font-weight: 600; }
+  .flex { display: flex; }
+  .flex-col { flex-direction: column; }
+  .items-center { align-items: center; }
+  .justify-center { justify-content: center; }
+  .justify-between { justify-content: space-between; }
+  .text-center { text-align: center; }
+  .flex-1 { flex: 1; }
+  .list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .list li { font-size: 13px; color: var(--gray-600); padding-left: 18px; position: relative; line-height: 1.6; }
+  .list li::before { content: ""; position: absolute; left: 0; top: 7px; width: 6px; height: 6px; border-radius: 50%; background: var(--green); }
+  .list-red li::before { background: var(--red); }
+  .issue-num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 22px; height: 22px; border-radius: 50%; font-size: 11px; font-weight: 700;
+    background: var(--red); color: white; margin-right: 8px; flex-shrink: 0;
+  }
+  .phase-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 4px 12px; border-radius: 8px; font-size: 11px; font-weight: 600;
+  }
+</style>
+</head>
+<body>
+
+<!-- ─── SLIDE 1: TITLE ─── -->
+<div class="slide" style="background: var(--dark); justify-content: center; align-items: center; text-align: center;">
+  <div>
+    <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--green); margin-bottom: 32px;">Elevate Strategy presents</div>
+    <h1 style="font-size: 56px; color: white; margin-bottom: 8px;">SD18 Sports</h1>
+    <p style="font-size: 22px; color: var(--gray-400); font-weight: 300; margin-bottom: 48px;">Brand Audit &amp; Growth Roadmap</p>
+    <div style="width: 48px; height: 2px; background: var(--green); margin: 0 auto 48px;"></div>
+    <p style="font-size: 13px; color: var(--gray-500);">Prepared exclusively for SD18 Sports &middot; April 2026</p>
+    <p style="font-size: 12px; color: var(--gray-600); margin-top: 8px; font-style: italic;">&ldquo;Your brand has built something rare. Let us help the world see it.&rdquo;</p>
+  </div>
+</div>
+
+<!-- ─── SLIDE 2: WHO WE ARE ─── -->
+<div class="slide">
+  <div class="label">About Us</div>
+  <h1 class="mb-8">Who We Are</h1>
+  <p class="mb-24">A boutique strategy agency built by people who have worked at scale &mdash; and came back to help growing brands do it right.</p>
+  <div class="cols" style="flex: 1;">
+    <div class="card card-cream" style="flex:1; display:flex; flex-direction:column;">
+      <div class="tag tag-green mb-12">Co-Founder &amp; Tech Lead</div>
+      <h3 class="mb-4">Aditya Shubham</h3>
+      <p class="text-sm" style="flex:1;">MBA, IIM Visakhapatnam &middot; Ex-Amazon EU Markets (Trailblazer Award). Built ML-powered growth strategies that tripled product signups from 300 to 900/month. Selected in Amazon ATLAS SDE program &mdash; 80 out of 14,000 applicants.</p>
+    </div>
+    <div class="card card-cream" style="flex:1; display:flex; flex-direction:column;">
+      <div class="tag tag-green mb-12">Co-Founder &amp; Strategy Lead</div>
+      <h3 class="mb-4">Adam Khan</h3>
+      <p class="text-sm" style="flex:1;">LLB, NLU Patiala &middot; Advocate, Ranchi High Court (4 years). Advises businesses on forward-looking strategy &mdash; not just legal fixes. Handles contracts, compliance, IP, and brand protection.</p>
+    </div>
+    <div class="card card-cream" style="flex:1; display:flex; flex-direction:column;">
+      <div class="tag tag-green mb-12">Content &amp; SEO Lead</div>
+      <h3 class="mb-4">Simardeep Kaur</h3>
+      <p class="text-sm" style="flex:1;">MA English Literature, Panjab University &middot; Assistant Professor, DAV College Chandigarh. Writing and editing since 2016. Editorial Reviewer at Pocket FM. Transforms complex ideas into clear, human content.</p>
+    </div>
+  </div>
+  <p class="mt-16 text-sm" style="color: var(--green); font-weight: 500;">See our work live: elevatestrategy.co.in</p>
+  <span class="page-num">02</span>
+  <span class="footer-brand">Elevate Strategy &middot; Confidential</span>
+</div>
+
+<!-- ─── SLIDE 3: WHAT WE DID ─── -->
+<div class="slide">
+  <div class="label">The Audit</div>
+  <h1 class="mb-8">We Audited Your Entire Online Presence</h1>
+  <p class="mb-24">Before this meeting, we independently analyzed everything &mdash; without needing any access from you.</p>
+  <div class="grid-4 mb-24">
+    <div class="card card-sm">
+      <h3 style="font-size: 14px; margin-bottom: 6px;">Website</h3>
+      <p class="text-xs">Every page, every link, the source code of sd18sports.com</p>
+    </div>
+    <div class="card card-sm">
+      <h3 style="font-size: 14px; margin-bottom: 6px;">Social Media</h3>
+      <p class="text-xs">YouTube, Facebook, Instagram &mdash; followers, content, engagement</p>
+    </div>
+    <div class="card card-sm">
+      <h3 style="font-size: 14px; margin-bottom: 6px;">Competitors</h3>
+      <p class="text-xs">SG Cricket, SS Cricket, DSC, BDM, and 3 more brands analyzed</p>
+    </div>
+    <div class="card card-sm">
+      <h3 style="font-size: 14px; margin-bottom: 6px;">Brand Position</h3>
+      <p class="text-xs">What you say vs. what the world actually sees online</p>
+    </div>
+  </div>
+  <div class="flex gap-16" style="gap: 24px;">
+    <div class="card card-red" style="flex:1; text-align:center;">
+      <div class="big-num big-num-red" style="font-size: 36px;">15</div>
+      <p class="text-sm fw-500 mt-4" style="color: var(--red);">Issues Found</p>
+      <p class="text-xs mt-4">4 critical &middot; 5 major &middot; 6 opportunities</p>
+    </div>
+    <div class="card card-green" style="flex:1; text-align:center;">
+      <div class="big-num" style="font-size: 36px;">4</div>
+      <p class="text-sm fw-500 mt-4" style="color: var(--green);">Hidden Strengths</p>
+      <p class="text-xs mt-4">Assets most agencies would miss entirely</p>
+    </div>
+  </div>
+  <span class="page-num">03</span>
+  <span class="footer-brand">Elevate Strategy &middot; Confidential</span>
+</div>
+
+<!-- ─── SLIDE 4: HIDDEN STRENGTHS ─── -->
+<div class="slide" style="background: var(--green-light);">
+  <div class="label">Hidden Strengths</div>
+  <h1 class="mb-8">What SD18 Has That Competitors Do Not</h1>
+  <p class="mb-24">Most cricket brands just sell gear. <strong style="color:var(--text);">You are building something bigger.</strong></p>
+  <div class="cols cols-tight" style="flex:1;">
+    <div style="flex: 1.2;">
+      <div class="card mb-16" style="text-align:center; padding: 32px;">
+        <div class="big-num" style="font-size: 64px;">97,300</div>
+        <p class="fw-500 mt-8" style="color: var(--text);">YouTube Subscribers</p>
+        <p class="text-xs mt-4">Larger than the population of most Indian towns. Your audience already exists &mdash; your website just does not know about it.</p>
+      </div>
+    </div>
+    <div style="flex: 1; display: flex; flex-direction: column; gap: 12px;">
+      <div class="card card-sm" style="flex:1;">
+        <div class="tag tag-green mb-8">Official Partner</div>
+        <h3 style="font-size: 15px;">Bihar State Cricket Academy</h3>
+        <p class="text-xs mt-4">SG charges lakhs for this credibility. You already have it &mdash; but your website does not mention it once.</p>
+      </div>
+      <div class="card card-sm" style="flex:1;">
+        <div class="tag tag-green mb-8">Community</div>
+        <h3 style="font-size: 15px;">Cricket Tournaments &amp; Events</h3>
+        <p class="text-xs mt-4">You organize real matches. This builds community that no advertising budget can buy. But online, it is invisible.</p>
+      </div>
+      <div class="card card-sm" style="flex:1;">
+        <div class="tag tag-green mb-8">Endorsement</div>
+        <h3 style="font-size: 15px;">Association with Cricketer Akash</h3>
+        <p class="text-xs mt-4">Your Facebook mentions an Indian cricketer. Your website has zero mention of this partnership.</p>
+      </div>
+    </div>
+  </div>
+  <span class="page-num">04</span>
+  <span class="footer-brand">Elevate Strategy &middot; Confidential</span>
+</div>
+
+<!-- ─── SLIDE 5: CRITICAL ISSUES ─── -->
+<div class="slide" style="background: var(--red-light);">
+  <div class="label label-red">Critical Issues</div>
+  <h1 class="mb-8">What Needs Fixing Today</h1>
+  <p class="mb-24">These are visible on your live website right now. Any customer can see them.</p>
+  <div class="cols" style="flex: 1;">
+    <div style="flex:1; display:flex; flex-direction:column; gap: 16px;">
+      <div class="card" style="flex:1;">
+        <div class="flex items-center mb-8"><span class="issue-num">1</span><h3 style="font-size: 14px;">Wrong Brand Name on Your Own Website</h3></div>
+        <p class="text-sm">Your About Us page says:</p>
+        <div class="quote-red quote mt-8" style="background: #fff5f5; padding: 12px 16px; border-radius: 8px;">
+          &ldquo;Welcome to <strong style="color:var(--red);">AD18Sports</strong>&rdquo;
+        </div>
+        <p class="text-xs mt-8 text-muted">It should say SD18Sports. This damages brand credibility the moment someone visits your About page.</p>
+      </div>
+      <div class="card" style="flex:1;">
+        <div class="flex items-center mb-8"><span class="issue-num">2</span><h3 style="font-size: 14px;">Placeholder Text in Refund Policy</h3></div>
+        <p class="text-sm">Your refund policy page literally says:</p>
+        <div class="quote-red quote mt-8" style="background: #fff5f5; padding: 12px 16px; border-radius: 8px;">
+          &ldquo;Items must be returned within <strong style="color:var(--red);">[insert number of days, e.g., 7]</strong> days of delivery.&rdquo;
+        </div>
+        <p class="text-xs mt-8 text-muted">This is legally questionable and looks deeply unprofessional. A customer seeing this would lose trust instantly.</p>
+      </div>
+    </div>
+    <div style="flex:1; display:flex; flex-direction:column; gap: 16px;">
+      <div class="card" style="flex:1;">
+        <div class="flex items-center mb-8"><span class="issue-num">3</span><h3 style="font-size: 14px;">Inconsistent Contact Information</h3></div>
+        <p class="text-sm mb-12">Different pages show different contact details:</p>
+        <table>
+          <tr><th></th><th>Email</th><th>Phone</th></tr>
+          <tr><td><strong>Main Site</strong></td><td>info@sd18sports.com</td><td>8001818666</td></tr>
+          <tr><td><strong>Refund Page</strong></td><td>sd18sports@gmail.com</td><td>098008 48482</td></tr>
+        </table>
+        <p class="text-xs mt-12 text-muted">Which one should a customer trust? Inconsistency creates confusion and erodes confidence.</p>
+      </div>
+      <div class="card" style="flex:1;">
+        <div class="flex items-center mb-8"><span class="issue-num">4</span><h3 style="font-size: 14px;">Generic AI-Written About Page</h3></div>
+        <p class="text-sm">Your About page uses generic, template text with no real story:</p>
+        <div class="quote-red quote mt-8" style="background: #fff5f5; padding: 12px 16px; border-radius: 8px;">
+          &ldquo;We are passionate about pushing the boundaries of athletic excellence...&rdquo;
+        </div>
+        <p class="text-xs mt-8 text-muted">No founder story. No mention of tournaments or the Academy sponsorship. No human element at all. This could be any sports store on the internet.</p>
+      </div>
+    </div>
+  </div>
+  <span class="page-num">05</span>
+  <span class="footer-brand">Elevate Strategy &middot; Confidential</span>
+</div>
+
+<!-- ─── SLIDE 6: MORE ISSUES ─── -->
+<div class="slide">
+  <div class="label label-red">Website &amp; Brand Issues</div>
+  <h1 class="mb-8">What Else Is Holding You Back</h1>
+  <p class="mb-24">Beyond the critical issues, these problems are quietly costing you customers every day.</p>
+  <div class="grid-3" style="flex: 1;">
+    <div class="card card-sm flex-col" style="display:flex;">
+      <div class="tag tag-orange mb-8">Design</div>
+      <h3 style="font-size: 13px;" class="mb-4">6 Different Fonts Loaded</h3>
+      <p class="text-xs" style="flex:1;">Lato, Montserrat, Nunito, Plus Jakarta Sans, Roboto, Cormorant &mdash; all on one site. This slows page loading and creates visual chaos. Professional sites use 2 fonts maximum.</p>
+    </div>
+    <div class="card card-sm flex-col" style="display:flex;">
+      <div class="tag tag-orange mb-8">Trust</div>
+      <h3 style="font-size: 13px;" class="mb-4">Zero Customer Reviews</h3>
+      <p class="text-xs" style="flex:1;">No testimonials, no ratings, no Google reviews widget anywhere on the site. Customers buy from brands they trust &mdash; and trust is built with social proof.</p>
+    </div>
+    <div class="card card-sm flex-col" style="display:flex;">
+      <div class="tag tag-orange mb-8">SEO</div>
+      <h3 style="font-size: 13px;" class="mb-4">No SEO on Inner Pages</h3>
+      <p class="text-xs" style="flex:1;">Empty or generic meta descriptions on About and category pages. No structured data. No descriptive alt text on images. Lost organic search traffic.</p>
+    </div>
+    <div class="card card-sm flex-col" style="display:flex;">
+      <div class="tag tag-orange mb-8">Content</div>
+      <h3 style="font-size: 13px;" class="mb-4">Only 3 Blog Posts</h3>
+      <p class="text-xs" style="flex:1;">All published Aug 2025, all generic SEO articles. No tournament coverage, no player stories, no behind-the-scenes. No content strategy at all.</p>
+    </div>
+    <div class="card card-sm flex-col" style="display:flex;">
+      <div class="tag tag-orange mb-8">UX</div>
+      <h3 style="font-size: 13px;" class="mb-4">Blinking WhatsApp Button</h3>
+      <p class="text-xs" style="flex:1;">The WhatsApp icon has a blinking animation that feels spammy and unprofessional. Should be subtle and trustworthy, not distracting.</p>
+    </div>
+    <div class="card card-sm flex-col" style="display:flex;">
+      <div class="tag tag-orange mb-8">Revenue</div>
+      <h3 style="font-size: 13px;" class="mb-4">No Email or Lead Capture</h3>
+      <p class="text-xs" style="flex:1;">No newsletter signup, no first-purchase discount popup, no abandoned cart recovery. Every visitor who leaves without buying is gone forever.</p>
+    </div>
+  </div>
+  <span class="page-num">06</span>
+  <span class="footer-brand">Elevate Strategy &middot; Confidential</span>
+</div>
+
+<!-- ─── SLIDE 7: SOCIAL MEDIA ─── -->
+<div class="slide">
+  <div class="label">Social Media Status</div>
+  <h1 class="mb-8">Your Digital Presence Today</h1>
+  <p class="mb-24">Three platforms, three different stories. One of them is a goldmine.</p>
+  <div class="cols" style="flex:1;">
+    <div class="card card-green" style="flex:1; display:flex; flex-direction:column;">
+      <div class="tag tag-green mb-12">Strongest Asset</div>
+      <div class="big-num mb-4">97.3K</div>
+      <h3 class="mb-8">YouTube Subscribers</h3>
+      <div class="divider"></div>
+      <ul class="list mt-8" style="flex:1;">
+        <li>Massive audience for a local sports brand</li>
+        <li>Videos, Shorts, Live content, Playlists</li>
+        <li>Channel description is completely empty</li>
+        <li>Zero videos embedded on your website</li>
+      </ul>
+      <div class="bar mt-12"><div class="bar-fill bar-green" style="width: 90%;"></div></div>
+      <p class="text-xs mt-4 text-muted">Audience: Excellent &middot; Integration: None</p>
+    </div>
+    <div class="card card-red" style="flex:1; display:flex; flex-direction:column;">
+      <div class="tag tag-red mb-12">Dormant 14+ Months</div>
+      <div class="big-num big-num-red mb-4">2,068</div>
+      <h3 class="mb-8">Instagram Followers</h3>
+      <div class="divider"></div>
+      <ul class="list list-red mt-8" style="flex:1;">
+        <li>87 posts built up, then abandoned</li>
+        <li><strong style="color:var(--red);">Last post: February 2025</strong></li>
+        <li>Over 14 months of silence</li>
+        <li>Instagram algorithm now suppresses reach</li>
+      </ul>
+      <div class="bar mt-12"><div class="bar-fill bar-red" style="width: 15%;"></div></div>
+      <p class="text-xs mt-4 text-muted">Audience: Exists &middot; Activity: Dead</p>
+    </div>
+    <div class="card" style="flex:1; display:flex; flex-direction:column;">
+      <div class="tag tag-orange mb-12">Underperforming</div>
+      <div class="big-num big-num-navy mb-4">2,393</div>
+      <h3 class="mb-8">Facebook Likes</h3>
+      <div class="divider"></div>
+      <ul class="list mt-8" style="flex:1;">
+        <li>Only 23 people "talking about this"</li>
+        <li>~1% engagement rate (low)</li>
+        <li>Mentions Cricketer Akash in bio</li>
+        <li>Could be strong for event marketing</li>
+      </ul>
+      <div class="bar mt-12"><div class="bar-fill bar-orange" style="width: 35%;"></div></div>
+      <p class="text-xs mt-4 text-muted">Audience: Modest &middot; Potential: Events hub</p>
+    </div>
+  </div>
+  <span class="page-num">07</span>
+  <span class="footer-brand">Elevate Strategy &middot; Confidential</span>
+</div>
+
+<!-- ─── SLIDE 8: COMPETITOR COMPARISON ─── -->
+<div class="slide">
+  <div class="label">Competitive Landscape</div>
+  <h1 class="mb-8">How SD18 Stacks Up</h1>
+  <p class="mb-24">You have advantages that established brands do not. But your website hides them.</p>
+  <table class="mb-24">
+    <thead>
+      <tr><th style="width:18%;"></th><th style="width:20.5%;"><strong style="color:var(--navy);">SD18 Sports</strong></th><th style="width:20.5%;">SG Cricket</th><th style="width:20.5%;">SS Cricket</th><th style="width:20.5%;">DSC</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Website</strong></td><td style="color:var(--red);">Template (SSB Creations)</td><td>Professional (Shopify)</td><td>Professional (WooCommerce)</td><td>Professional (Magento)</td></tr>
+      <tr><td><strong>Brand Story</strong></td><td style="color:var(--red);">Generic AI text</td><td>Heritage since 1931</td><td>Legacy since 1969</td><td>Strong narrative</td></tr>
+      <tr><td><strong>Social Proof</strong></td><td style="color:var(--red);">None on site</td><td>ICC partnerships</td><td>Team India</td><td>Player endorsements</td></tr>
+      <tr><td><strong>YouTube</strong></td><td><strong style="color:var(--green);">97.3K subscribers</strong></td><td>Large</td><td>Moderate</td><td>Moderate</td></tr>
+      <tr><td><strong>Community</strong></td><td><strong style="color:var(--green);">Tournaments + Academy</strong></td><td>Limited</td><td>Limited</td><td>Limited</td></tr>
+      <tr><td><strong>Reviews</strong></td><td style="color:var(--red);">None</td><td>Integrated</td><td>Integrated</td><td>Integrated</td></tr>
+      <tr><td><strong>Instagram</strong></td><td style="color:var(--red);">Dormant 14+ months</td><td>Active</td><td>Active</td><td>Active</td></tr>
+    </tbody>
+  </table>
+  <div class="cols gap-16">
+    <div class="card card-green card-sm" style="flex:1; text-align:center;">
+      <p class="text-sm fw-500" style="color: var(--green);">Where You Win</p>
+      <p class="text-xs mt-4">YouTube audience &middot; Real community &middot; Academy sponsorship &middot; Tournament events &middot; Ground presence</p>
+    </div>
+    <div class="card card-red card-sm" style="flex:1; text-align:center;">
+      <p class="text-sm fw-500" style="color: var(--red);">Where You Lose</p>
+      <p class="text-xs mt-4">Website quality &middot; Brand presentation &middot; SEO &middot; Social proof &middot; Instagram activity &middot; Email marketing</p>
+    </div>
+  </div>
+  <p class="mt-16 text-sm text-center fw-500" style="color: var(--text);">You are winning on the ground. You are losing on the screen.</p>
+  <span class="page-num">08</span>
+  <span class="footer-brand">Elevate Strategy &middot; Confidential</span>
+</div>
+
+<!-- ─── SLIDE 9: MISSED REVENUE ─── -->
+<div class="slide">
+  <div class="label label-red">The Cost</div>
+  <h1 class="mb-8">What This Gap Is Costing You</h1>
+  <p class="mb-24">Every day these issues stay unfixed, potential customers are going to competitors.</p>
+  <div class="cols" style="flex:1;">
+    <div style="flex:1; display:flex; flex-direction:column; gap: 14px;">
+      <div class="card card-sm" style="flex:1; display:flex; align-items:flex-start; gap:12px;">
+        <div class="tag tag-red" style="flex-shrink:0; margin-top:2px;">SEO</div>
+        <div><p class="text-sm">Only 3 blog posts targeting generic keywords. Your competitors rank for hundreds of cricket-related terms. Every missed search = a customer going to SG or SS.</p></div>
+      </div>
+      <div class="card card-sm" style="flex:1; display:flex; align-items:flex-start; gap:12px;">
+        <div class="tag tag-red" style="flex-shrink:0; margin-top:2px;">Trust</div>
+        <div><p class="text-sm">97K YouTube subscribers, but zero testimonials, zero ratings on your website. Customers buy from brands they trust. Trust is built with proof.</p></div>
+      </div>
+      <div class="card card-sm" style="flex:1; display:flex; align-items:flex-start; gap:12px;">
+        <div class="tag tag-red" style="flex-shrink:0; margin-top:2px;">Video</div>
+        <div><p class="text-sm">A 97K-subscriber YouTube channel producing content. Your website has zero videos. Product videos increase conversion by up to 80%.</p></div>
+      </div>
+      <div class="card card-sm" style="flex:1; display:flex; align-items:flex-start; gap:12px;">
+        <div class="tag tag-red" style="flex-shrink:0; margin-top:2px;">Social</div>
+        <div><p class="text-sm">Instagram dormant for 14+ months. 2,068 followers receiving zero content. An audience built and then abandoned.</p></div>
+      </div>
+    </div>
+    <div style="flex:0.7; display:flex; flex-direction:column; gap: 14px;">
+      <div class="card card-dark" style="flex:1; display:flex; flex-direction:column; justify-content:center; text-align:center;">
+        <p class="text-xs text-muted mb-8">Conservative estimate</p>
+        <div class="big-num" style="font-size: 52px; color: var(--green);">&#8377;4.8L</div>
+        <p class="text-sm text-white mt-12 fw-400">Additional annual revenue from converting just 1% of 97K YouTube subscribers at avg. order &#8377;500</p>
+        <div class="divider" style="background: var(--dark2); margin: 16px 0;"></div>
+        <p class="text-xs text-muted">This does not include SEO traffic, email marketing, social media, or repeat purchases.</p>
+      </div>
+    </div>
+  </div>
+  <span class="page-num">09</span>
+  <span class="footer-brand">Elevate Strategy &middot; Confidential</span>
+</div>
+
+<!-- ─── SLIDE 10: VISION ─── -->
+<div class="slide" style="background: var(--dark);">
+  <div class="label" style="color: var(--green);">The Vision</div>
+  <h1 style="color: white; margin-bottom: 8px;">What SD18 Could Look Like</h1>
+  <p style="color: var(--gray-400); margin-bottom: 32px;">We built a live, working redesign concept. Here is what changes.</p>
+  <div class="cols" style="flex:1;">
+    <div style="flex:1;">
+      <h3 style="color: var(--red); font-size: 13px; margin-bottom: 16px;">BEFORE &mdash; Current Site</h3>
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <div style="padding:10px 14px; background: rgba(220,38,38,0.1); border-radius:8px; border: 1px solid rgba(220,38,38,0.2);">
+          <p class="text-xs" style="color: var(--red-dim);">Wrong brand name &ldquo;AD18Sports&rdquo;</p>
+        </div>
+        <div style="padding:10px 14px; background: rgba(220,38,38,0.1); border-radius:8px; border: 1px solid rgba(220,38,38,0.2);">
+          <p class="text-xs" style="color: var(--red-dim);">Placeholder text in legal pages</p>
+        </div>
+        <div style="padding:10px 14px; background: rgba(220,38,38,0.1); border-radius:8px; border: 1px solid rgba(220,38,38,0.2);">
+          <p class="text-xs" style="color: var(--red-dim);">Generic AI-written brand story</p>
+        </div>
+        <div style="padding:10px 14px; background: rgba(220,38,38,0.1); border-radius:8px; border: 1px solid rgba(220,38,38,0.2);">
+          <p class="text-xs" style="color: var(--red-dim);">6 fonts, template design, no trust signals</p>
+        </div>
+        <div style="padding:10px 14px; background: rgba(220,38,38,0.1); border-radius:8px; border: 1px solid rgba(220,38,38,0.2);">
+          <p class="text-xs" style="color: var(--red-dim);">Zero videos, zero reviews, zero community</p>
+        </div>
+        <div style="padding:10px 14px; background: rgba(220,38,38,0.1); border-radius:8px; border: 1px solid rgba(220,38,38,0.2);">
+          <p class="text-xs" style="color: var(--red-dim);">URL structure: /subcategory/bat</p>
+        </div>
+      </div>
+    </div>
+    <div style="flex:1;">
+      <h3 style="color: var(--green); font-size: 13px; margin-bottom: 16px;">AFTER &mdash; Redesign Concept</h3>
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <div style="padding:10px 14px; background: rgba(22,163,74,0.1); border-radius:8px; border: 1px solid rgba(22,163,74,0.2);">
+          <p class="text-xs" style="color: var(--green-dim);">Hero with action photography &amp; Academy badge</p>
+        </div>
+        <div style="padding:10px 14px; background: rgba(22,163,74,0.1); border-radius:8px; border: 1px solid rgba(22,163,74,0.2);">
+          <p class="text-xs" style="color: var(--green-dim);">Proper legal policies drafted by our advocate</p>
+        </div>
+        <div style="padding:10px 14px; background: rgba(22,163,74,0.1); border-radius:8px; border: 1px solid rgba(22,163,74,0.2);">
+          <p class="text-xs" style="color: var(--green-dim);">Real founder story, tournament history, mission</p>
+        </div>
+        <div style="padding:10px 14px; background: rgba(22,163,74,0.1); border-radius:8px; border: 1px solid rgba(22,163,74,0.2);">
+          <p class="text-xs" style="color: var(--green-dim);">2 fonts, modern design, 97K YouTube social proof</p>
+        </div>
+        <div style="padding:10px 14px; background: rgba(22,163,74,0.1); border-radius:8px; border: 1px solid rgba(22,163,74,0.2);">
+          <p class="text-xs" style="color: var(--green-dim);">YouTube integration, reviews, community page</p>
+        </div>
+        <div style="padding:10px 14px; background: rgba(22,163,74,0.1); border-radius:8px; border: 1px solid rgba(22,163,74,0.2);">
+          <p class="text-xs" style="color: var(--green-dim);">Clean URLs: /shop/bats &mdash; customer-friendly</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="mt-16 text-sm text-center" style="color: var(--green); font-weight: 500;">We will show you the live mockup after this presentation.</p>
+  <span class="page-num" style="color: var(--gray-600);">10</span>
+  <span class="footer-brand" style="color: var(--gray-600);">Elevate Strategy &middot; Confidential</span>
+</div>
+
+<!-- ─── SLIDE 11: COMMUNITY PAGE ─── -->
+<div class="slide" style="background: var(--green-light);">
+  <div class="label">New Concept</div>
+  <h1 class="mb-8">A Page That Does Not Exist Yet &mdash; But Should</h1>
+  <p class="mb-24">No competitor has a community page. Because no competitor does what you do on the ground.</p>
+  <div class="cols" style="flex:1;">
+    <div class="card" style="flex:1; display:flex; flex-direction:column;">
+      <div class="tag tag-green mb-12">Partnership</div>
+      <h3 class="mb-8">Bihar Cricket Academy</h3>
+      <ul class="list" style="flex:1;">
+        <li>Official kit partner section with photos</li>
+        <li>Academy achievements and milestones</li>
+        <li>Player spotlights and testimonials</li>
+        <li>Training and event galleries</li>
+      </ul>
+    </div>
+    <div class="card" style="flex:1; display:flex; flex-direction:column;">
+      <div class="tag tag-green mb-12">Events</div>
+      <h3 class="mb-8">Tournament Hub</h3>
+      <ul class="list" style="flex:1;">
+        <li>Past events gallery with results</li>
+        <li>Upcoming tournament calendar</li>
+        <li>Registration and schedules</li>
+        <li>Highlight reels from YouTube</li>
+      </ul>
+    </div>
+    <div class="card" style="flex:1; display:flex; flex-direction:column;">
+      <div class="tag tag-green mb-12">Content</div>
+      <h3 class="mb-8">SD18 in Action</h3>
+      <ul class="list" style="flex:1;">
+        <li>YouTube video wall &mdash; you already have the content</li>
+        <li>Player and coach testimonials</li>
+        <li>Behind-the-scenes content</li>
+        <li>Social media feed integration</li>
+      </ul>
+    </div>
+  </div>
+  <p class="mt-16 text-sm fw-500" style="color: var(--text);">This page alone would set SD18 apart from every online cricket retailer in India.</p>
+  <span class="page-num">11</span>
+  <span class="footer-brand">Elevate Strategy &middot; Confidential</span>
+</div>
+
+<!-- ─── SLIDE 12: AI ─── -->
+<div class="slide">
+  <div class="label">Technology</div>
+  <h1 class="mb-8">What Happens When Technology Meets Your Brand</h1>
+  <p class="mb-24">We do not just build websites. We build intelligent systems that grow with you.</p>
+  <div class="grid-4" style="flex: 1;">
+    <div class="card card-sm" style="display:flex; flex-direction:column;">
+      <div class="tag tag-green mb-12">WhatsApp</div>
+      <h3 style="font-size: 14px;" class="mb-8">AI Chatbot</h3>
+      <p class="text-xs" style="flex:1;">Customers ask &ldquo;Which bat is best for leather ball under Rs 2000?&rdquo; and get an instant, accurate answer. 24/7. No extra staff needed.</p>
+    </div>
+    <div class="card card-sm" style="display:flex; flex-direction:column;">
+      <div class="tag tag-green mb-12">Content</div>
+      <h3 style="font-size: 14px;" class="mb-8">AI Product Descriptions</h3>
+      <p class="text-xs" style="flex:1;">SEO-optimized descriptions for every product SKU, generated in hours not weeks. Consistent voice, proper keywords, real conversion copy.</p>
+    </div>
+    <div class="card card-sm" style="display:flex; flex-direction:column;">
+      <div class="tag tag-green mb-12">Growth</div>
+      <h3 style="font-size: 14px;" class="mb-8">ML-Powered SEO</h3>
+      <p class="text-xs" style="flex:1;">The same models we used to drive 3x growth for a SaaS product, applied to identify cricket equipment search opportunities.</p>
+    </div>
+    <div class="card card-sm" style="display:flex; flex-direction:column;">
+      <div class="tag tag-green mb-12">Insights</div>
+      <h3 style="font-size: 14px;" class="mb-8">Smart Analytics</h3>
+      <p class="text-xs" style="flex:1;">Know which products trend, which content drives sales, and where to invest next. Powered by data and ML, not guesswork.</p>
+    </div>
+  </div>
+  <div class="card card-dark mt-20" style="text-align:center; padding:16px 24px;">
+    <p class="text-sm" style="color: var(--gray-300);">Our tech lead built ML models at Amazon and was selected into the ATLAS SDE program &mdash; 80 out of 14,000 applicants. <strong>This is not ChatGPT with a wrapper.</strong></p>
+  </div>
+  <span class="page-num">12</span>
+  <span class="footer-brand">Elevate Strategy &middot; Confidential</span>
+</div>
+
+<!-- ─── SLIDE 13: SOCIAL STRATEGY ─── -->
+<div class="slide">
+  <div class="label">Social Media Strategy</div>
+  <h1 class="mb-8">From 97K Subscribers to a Revenue Ecosystem</h1>
+  <p class="mb-24">Your audience already exists across 3 platforms. We connect them into one system that drives sales.</p>
+  <div class="cols" style="flex:1;">
+    <div class="card card-green card-sm" style="flex:1; display:flex; flex-direction:column;">
+      <h3 class="mb-4" style="font-size: 14px;">YouTube &middot; 97.3K</h3>
+      <div class="divider"></div>
+      <ul class="list mt-8" style="flex:1;">
+        <li>Fill in empty channel description</li>
+        <li>Cross-promote to website &amp; Instagram</li>
+        <li>Embed product demo videos on site</li>
+        <li>Tournament highlight reels</li>
+        <li>YouTube Shorts for reach growth</li>
+      </ul>
+    </div>
+    <div class="card card-red card-sm" style="flex:1; display:flex; flex-direction:column;">
+      <h3 class="mb-4" style="font-size: 14px;">Instagram &middot; 2,068 (Revival)</h3>
+      <div class="divider"></div>
+      <ul class="list mt-8" style="flex:1;">
+        <li><strong>Restart posting immediately</strong></li>
+        <li>4&ndash;5 posts per week consistently</li>
+        <li>Pillars: Product, Community, Tips, BTS</li>
+        <li>Reels from tournament footage</li>
+        <li>Player and academy takeovers</li>
+      </ul>
+    </div>
+    <div class="card card-sm" style="flex:1; display:flex; flex-direction:column;">
+      <h3 class="mb-4" style="font-size: 14px;">Facebook &middot; 2,393</h3>
+      <div class="divider"></div>
+      <ul class="list mt-8" style="flex:1;">
+        <li>Event marketing hub for tournaments</li>
+        <li>Customer community group</li>
+        <li>Targeted ads: cricket fans in WB + Bihar</li>
+        <li>Cross-post YouTube content</li>
+        <li>Review collection campaigns</li>
+      </ul>
+    </div>
+  </div>
+  <span class="page-num">13</span>
+  <span class="footer-brand">Elevate Strategy &middot; Confidential</span>
+</div>
+
+<!-- ─── SLIDE 14: OUR AGENCY ─── -->
+<div class="slide">
+  <div class="label">Proof of Execution</div>
+  <h1 class="mb-8">We Practice What We Preach</h1>
+  <p class="mb-24">Visit <strong>elevatestrategy.co.in</strong> &mdash; our website, built with the same technology we would use for SD18.</p>
+  <div class="cols" style="flex:1;">
+    <div style="flex:1; display:flex; flex-direction:column; gap:16px;">
+      <div class="card card-cream card-sm" style="flex:1;">
+        <h3 style="font-size: 14px;" class="mb-4">Our Tech Stack</h3>
+        <ul class="list">
+          <li>Next.js &amp; React &mdash; fast, modern, SEO-optimized</li>
+          <li>Mobile-first responsive design</li>
+          <li>Vercel hosting &mdash; globally distributed, instant loading</li>
+          <li>Real content, real people, real work</li>
+        </ul>
+      </div>
+      <div class="card card-cream card-sm" style="flex:1;">
+        <h3 style="font-size: 14px;" class="mb-4">Our Process</h3>
+        <ul class="list">
+          <li>Research first, build second</li>
+          <li>Data-driven decisions, not assumptions</li>
+          <li>Transparent communication at every step</li>
+          <li>Long-term partnership, not one-time projects</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card card-dark" style="flex:1; display:flex; flex-direction:column; justify-content:center;">
+      <div class="tag mb-16" style="background: rgba(22,163,74,0.2); color: var(--green);">Case Study</div>
+      <h2 style="color: white; font-size: 24px; margin-bottom: 12px;">finder.io</h2>
+      <p style="color: var(--gray-400); font-size: 13px; line-height: 1.7; margin-bottom: 24px;">
+        We built an ML-powered SEO strategy for a SaaS product and achieved:
+      </p>
+      <div class="flex" style="gap: 24px;">
+        <div>
+          <div style="font-family:'DM Sans'; font-size:32px; font-weight:700; color:var(--green);">3x</div>
+          <p class="text-xs text-muted">Signup growth<br>300 &rarr; 900/mo</p>
+        </div>
+        <div>
+          <div style="font-family:'DM Sans'; font-size:32px; font-weight:700; color:var(--green);">#1</div>
+          <p class="text-xs text-muted">Product in a<br>40-product suite</p>
+        </div>
+      </div>
+      <p style="color: var(--gray-500); font-size: 11px; margin-top: 24px; font-style: italic;">If you like what you see on our site, imagine what we would build for SD18.</p>
+    </div>
+  </div>
+  <span class="page-num">14</span>
+  <span class="footer-brand">Elevate Strategy &middot; Confidential</span>
+</div>
+
+<!-- ─── SLIDE 15: ROADMAP ─── -->
+<div class="slide">
+  <div class="label">The Plan</div>
+  <h1 class="mb-8">Three Phases: Quick Wins, Brand Build, Growth</h1>
+  <p class="mb-24">A structured approach. Start small, prove value, then scale together.</p>
+  <div class="cols" style="flex:1;">
+    <div class="card" style="flex:1; display:flex; flex-direction:column; border-top: 3px solid var(--green);">
+      <div class="phase-badge mb-12" style="background: var(--green-dim); color: var(--green);">Phase 1 &middot; Week 1&ndash;2</div>
+      <h3 class="mb-8">Quick Wins</h3>
+      <ul class="list" style="flex:1;">
+        <li>Fix brand name typo (AD18 &rarr; SD18)</li>
+        <li>Fix placeholder text in refund policy</li>
+        <li>Standardize contact information</li>
+        <li>Draft proper legal policies</li>
+        <li>Basic SEO fixes &mdash; meta tags, alt text</li>
+        <li>Clean URL structure</li>
+        <li>YouTube channel description &amp; links</li>
+      </ul>
+    </div>
+    <div class="card" style="flex:1; display:flex; flex-direction:column; border-top: 3px solid var(--navy);">
+      <div class="phase-badge mb-12" style="background: #e0f2fe; color: var(--navy);">Phase 2 &middot; Month 1&ndash;2</div>
+      <h3 class="mb-8">Brand Transformation</h3>
+      <ul class="list" style="flex:1;">
+        <li>Full website redesign (modern, fast, mobile-first)</li>
+        <li>Real brand story development</li>
+        <li>Community &amp; Sponsorship page</li>
+        <li>Social media strategy &amp; content calendar</li>
+        <li>Instagram revival plan &amp; execution</li>
+        <li>AI chatbot for WhatsApp support</li>
+        <li>Customer review collection system</li>
+      </ul>
+    </div>
+    <div class="card" style="flex:1; display:flex; flex-direction:column; border-top: 3px solid var(--orange);">
+      <div class="phase-badge mb-12" style="background: #fef3c7; color: #b45309;">Phase 3 &middot; Ongoing</div>
+      <h3 class="mb-8">Growth Partnership</h3>
+      <ul class="list" style="flex:1;">
+        <li>Social media management &amp; content creation</li>
+        <li>SEO content strategy (cricket keywords)</li>
+        <li>Email marketing &mdash; newsletter, abandoned cart</li>
+        <li>YouTube-to-website conversion funnel</li>
+        <li>AI-powered analytics &amp; product insights</li>
+        <li>Tournament &amp; event marketing</li>
+        <li>Performance advertising (Google/Meta)</li>
+      </ul>
+    </div>
+  </div>
+  <span class="page-num">15</span>
+  <span class="footer-brand">Elevate Strategy &middot; Confidential</span>
+</div>
+
+<!-- ─── SLIDE 16: WHY US ─── -->
+<div class="slide">
+  <div class="label">Why Elevate Strategy</div>
+  <h1 class="mb-8">Why Us, For This</h1>
+  <p class="mb-24">Every member of our team brings something specific that SD18 needs.</p>
+  <table class="mb-24">
+    <thead>
+      <tr><th style="width:40%;">What You Need</th><th style="width:60%;">What We Bring</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>A real website, not a template</td><td><strong>An Amazon-trained engineer</strong> who builds with Next.js and React &mdash; the same tech used by Nike, Netflix, and Flipkart</td></tr>
+      <tr><td>Legal policies that actually protect you</td><td><strong>A practicing Ranchi High Court advocate</strong> who drafts real policies, not template placeholders</td></tr>
+      <tr><td>Content that sounds human</td><td><strong>A literature professor and editor</strong> who has been crafting content since 2016</td></tr>
+      <tr><td>Strategy, not just a redesign</td><td><strong>IIM-trained strategists</strong> who think in systems &mdash; not just pages and posts</td></tr>
+      <tr><td>AI tools that actually work</td><td><strong>ML models built at Amazon</strong> &mdash; selected 80 of 14,000 for the ATLAS SDE program</td></tr>
+      <tr><td>Someone who gets sports</td><td><strong>A national-level footballer</strong> and cricket enthusiast who understands the culture</td></tr>
+    </tbody>
+  </table>
+  <div class="card card-cream" style="text-align: center; padding: 16px;">
+    <p class="text-sm fw-500" style="color: var(--text);">We are not the biggest agency. We are the right one for this.</p>
+  </div>
+  <span class="page-num">16</span>
+  <span class="footer-brand">Elevate Strategy &middot; Confidential</span>
+</div>
+
+<!-- ─── SLIDE 17: NEXT STEPS ─── -->
+<div class="slide" style="background: var(--green-light);">
+  <div class="label">Next Steps</div>
+  <h1 class="mb-8">Let Us Start With the Quick Wins</h1>
+  <p class="mb-24">No long proposals. No waiting. We start this week.</p>
+  <div style="display:flex; flex-direction:column; gap:20px; flex:1; max-width:800px;">
+    <div class="card" style="display:flex; align-items:flex-start; gap:20px; padding:24px;">
+      <div style="width:40px; height:40px; border-radius:10px; background:var(--green); color:white; display:flex; align-items:center; justify-content:center; font-family:'DM Sans'; font-weight:700; font-size:18px; flex-shrink:0;">1</div>
+      <div>
+        <h3 style="font-size:15px; margin-bottom:4px;">This Week</h3>
+        <p class="text-sm">We fix the 4 critical issues on your live site. No cost to you. Consider it a demonstration of what we can do.</p>
+      </div>
+    </div>
+    <div class="card" style="display:flex; align-items:flex-start; gap:20px; padding:24px;">
+      <div style="width:40px; height:40px; border-radius:10px; background:var(--navy); color:white; display:flex; align-items:center; justify-content:center; font-family:'DM Sans'; font-weight:700; font-size:18px; flex-shrink:0;">2</div>
+      <div>
+        <h3 style="font-size:15px; margin-bottom:4px;">Next Week</h3>
+        <p class="text-sm">We present the full Phase 2 proposal with detailed timeline and investment options.</p>
+      </div>
+    </div>
+    <div class="card" style="display:flex; align-items:flex-start; gap:20px; padding:24px;">
+      <div style="width:40px; height:40px; border-radius:10px; background:var(--orange); color:white; display:flex; align-items:center; justify-content:center; font-family:'DM Sans'; font-weight:700; font-size:18px; flex-shrink:0;">3</div>
+      <div>
+        <h3 style="font-size:15px; margin-bottom:4px;">Your Only Commitment Right Now</h3>
+        <p class="text-sm">Give us access to your website backend. That is all we need to start.</p>
+      </div>
+    </div>
+  </div>
+  <p class="mt-auto text-sm fw-500" style="color: var(--text);">We would rather show you what we can do than talk about it.</p>
+  <span class="page-num">17</span>
+  <span class="footer-brand">Elevate Strategy &middot; Confidential</span>
+</div>
+
+<!-- ─── SLIDE 18: CLOSING ─── -->
+<div class="slide" style="background: var(--dark); justify-content: center; align-items: center; text-align: center;">
+  <div>
+    <div class="big-num" style="font-size: 72px; color: var(--green); margin-bottom: 16px;">97,000</div>
+    <h1 style="color: white; font-size: 36px; margin-bottom: 8px; line-height: 1.4;">people are watching.<br>Let them see the real SD18.</h1>
+    <div style="width: 48px; height: 2px; background: var(--green); margin: 32px auto;"></div>
+    <p style="color: var(--gray-400); font-size: 16px; margin-bottom: 4px; font-weight: 500;">Elevate Strategy</p>
+    <p style="color: var(--gray-500); font-size: 13px;">elevatestrategy.co.in</p>
+    <p style="color: var(--gray-500); font-size: 13px; margin-top: 24px;">Aditya Shubham &middot; Adam Khan &middot; Simardeep Kaur</p>
+    <p style="color: var(--gray-600); font-size: 11px; margin-top: 32px; font-style: italic;">Confidential &mdash; Prepared exclusively for SD18 Sports</p>
+  </div>
+</div>
+
+</body>
+</html>

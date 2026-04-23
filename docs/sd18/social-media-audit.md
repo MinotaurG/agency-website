@@ -21,8 +21,11 @@
 
 ## Instagram — @sd18sports
 - **URL:** https://www.instagram.com/sd18sports/
-- **Followers:** Could not scrape (Instagram auth wall). Need manual check.
-- **Assessment:** Profile exists and is linked from website. Need to manually check follower count, post frequency, engagement rate, and content quality.
+- **Followers:** 2,068
+- **Following:** 2
+- **Posts:** 87
+- **Last post:** 21 February 2025 — **DORMANT for 14+ months**
+- **Assessment:** Account exists but is effectively dead. 87 posts built up over time, then completely abandoned. 2,068 followers with zero engagement for over a year. This is a wasted asset — the audience is there but getting zero content. Instagram's algorithm punishes dormant accounts, so even when they restart, reach will be suppressed initially.
 
 ---
 
