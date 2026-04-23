@@ -1,12 +1,28 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
 
+const rotatingPhrases = [
+  { line1: "We make sure the", line2: "world knows." },
+  { line1: "We build systems", line2: "that scale." },
+  { line1: "We turn strategy", line2: "into growth." },
+];
+
 export function Hero() {
+  const [phraseIndex, setPhraseIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPhraseIndex((prev) => (prev + 1) % rotatingPhrases.length);
+    }, 3500);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-[hsl(var(--background))]" />
@@ -19,7 +35,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            Brand Strategy / Digital Growth / Legal Compliance
+            Brand Strategy / Digital Growth / AI-Powered Solutions
           </motion.p>
 
           <motion.h1
@@ -31,10 +47,21 @@ export function Hero() {
             Your brand does
             <br />
             amazing things.
-            <span className="text-primary block mt-2">
-              We make sure the
-              <br />
-              world knows.
+            <span className="text-primary block mt-2 min-h-[2.2em]">
+              <AnimatePresence mode="wait">
+                <motion.span
+                  key={phraseIndex}
+                  className="block"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -30 }}
+                  transition={{ duration: 0.4, ease: [0.21, 0.47, 0.32, 0.98] }}
+                >
+                  {rotatingPhrases[phraseIndex].line1}
+                  <br />
+                  {rotatingPhrases[phraseIndex].line2}
+                </motion.span>
+              </AnimatePresence>
             </span>
           </motion.h1>
 

@@ -116,7 +116,7 @@ export function ContactForm() {
           <label className="text-sm font-medium mb-2 block">Name *</label>
           <Input
             {...register("name")}
-            placeholder="John Doe"
+            placeholder="Your name"
             className={errors.name ? "border-red-500 focus-visible:ring-red-500" : ""}
           />
           {errors.name && (
@@ -128,7 +128,7 @@ export function ContactForm() {
           <Input
             {...register("email")}
             type="email"
-            placeholder="john@company.com"
+            placeholder="you@company.com"
             className={errors.email ? "border-red-500 focus-visible:ring-red-500" : ""}
           />
           {errors.email && (
@@ -173,10 +173,10 @@ export function ContactForm() {
             className="w-full h-10 rounded-md border border-input bg-background px-3 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           >
             <option value="not-sure">Not sure yet</option>
-            <option value="<5k">Under $5,000</option>
-            <option value="5k-15k">$5,000 — $15,000</option>
-            <option value="15k-50k">$15,000 — $50,000</option>
-            <option value="50k+">$50,000+</option>
+            <option value="<5k">Under ₹50,000</option>
+            <option value="5k-15k">₹50,000 — ₹1,50,000</option>
+            <option value="15k-50k">₹1,50,000 — ₹5,00,000</option>
+            <option value="50k+">₹5,00,000+</option>
           </select>
         </div>
       </div>

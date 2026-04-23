@@ -13,7 +13,7 @@ export const mainNav = [
         title: "SEO",
         href: "/services/seo",
         icon: "search",
-        description: "Dominate search engine rankings",
+        description: "Data-driven search rankings",
       },
       {
         title: "Social Media",

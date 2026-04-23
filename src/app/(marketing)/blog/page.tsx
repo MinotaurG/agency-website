@@ -21,7 +21,7 @@ export default async function BlogPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-slate-50 to-white">
+      <section className="pt-32 pb-16 bg-background">
         <div className="container">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">
@@ -40,7 +40,7 @@ export default async function BlogPage() {
       </section>
 
       {/* Posts */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-background">
         <div className="container">
           {posts.length === 0 ? (
             <div className="text-center py-20">
@@ -51,7 +51,7 @@ export default async function BlogPage() {
                 We&apos;re working on some great content. Check back soon!
               </p>
               <p className="text-sm text-muted-foreground mt-4">
-                👉 Add your first post at{" "}
+                Add your first post at{" "}
                 <Link href="/studio" className="text-primary underline">
                   /studio
                 </Link>

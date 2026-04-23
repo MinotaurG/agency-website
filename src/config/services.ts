@@ -34,7 +34,6 @@ export interface Service {
   detailedFeatures: ServiceFeature[];
   process: ProcessStep[];
   faqs: FAQ[];
-  stats: { value: string; label: string }[];
 }
 
 export const services: Service[] = [
@@ -100,12 +99,6 @@ export const services: Service[] = [
       { question: "Do you provide hosting?", answer: "Yes, we can set up and manage hosting on platforms like Vercel, AWS, or your preferred provider. We recommend the best option based on your needs." },
       { question: "Will my website be mobile-friendly?", answer: "Absolutely. Every website we build is fully responsive and optimized for all devices — mobile, tablet, and desktop." },
     ],
-    stats: [
-      { value: "100+", label: "Websites Built" },
-      { value: "99.9%", label: "Uptime" },
-      { value: "<2s", label: "Avg Load Time" },
-      { value: "4.9★", label: "Client Rating" },
-    ],
   },
   {
     title: "SEO",
@@ -144,12 +137,6 @@ export const services: Service[] = [
       { question: "Do you guarantee #1 rankings?", answer: "No legitimate SEO agency can guarantee specific rankings. We focus on sustainable growth through proven strategies and transparent reporting." },
       { question: "What's included in the monthly reports?", answer: "Our reports cover keyword rankings, organic traffic, backlink profile, technical health scores, conversion data, and next-month action items." },
       { question: "Do you work with our existing content?", answer: "Yes. We audit and optimize your existing content while also creating new content to fill keyword gaps and build topical authority." },
-    ],
-    stats: [
-      { value: "300%", label: "Avg Traffic Growth" },
-      { value: "50+", label: "SEO Campaigns" },
-      { value: "10K+", label: "Keywords Ranked" },
-      { value: "85%", label: "Page 1 Rankings" },
     ],
   },
   {
@@ -190,12 +177,6 @@ export const services: Service[] = [
       { question: "Do you create all the content?", answer: "Yes, our team handles copywriting, graphic design, and video production. We also welcome any brand assets or content you'd like to share." },
       { question: "Can you run paid ad campaigns?", answer: "Absolutely. We create, manage, and optimize paid campaigns across all major social platforms with detailed ROI reporting." },
     ],
-    stats: [
-      { value: "2M+", label: "Total Reach" },
-      { value: "500K+", label: "Engagements" },
-      { value: "40+", label: "Brands Managed" },
-      { value: "5x", label: "Avg Engagement Lift" },
-    ],
   },
   {
     title: "Business Development",
@@ -235,12 +216,6 @@ export const services: Service[] = [
       { question: "What's the typical engagement length?", answer: "Most engagements run 3-6 months for strategy development and initial implementation. Many clients continue with ongoing advisory retainers." },
       { question: "Do you help with fundraising?", answer: "Yes, we can help with pitch decks, financial modeling, investor introductions, and fundraising strategy." },
     ],
-    stats: [
-      { value: "$50M+", label: "Revenue Generated" },
-      { value: "35+", label: "Businesses Scaled" },
-      { value: "3x", label: "Avg Revenue Growth" },
-      { value: "90%", label: "Client Satisfaction" },
-    ],
   },
   {
     title: "Finance Consultancy",
@@ -279,12 +254,6 @@ export const services: Service[] = [
       { question: "What industries do you serve?", answer: "We work across industries including SaaS, e-commerce, professional services, manufacturing, and startups. Our principles apply broadly." },
       { question: "Can you help us prepare for fundraising?", answer: "Absolutely. We create investor-ready financial models, projections, and help you tell a compelling financial story to potential investors." },
       { question: "How do you charge for finance consultancy?", answer: "We offer both project-based pricing for specific deliverables and monthly retainers for ongoing advisory. We'll recommend the best fit during our consultation." },
-    ],
-    stats: [
-      { value: "$100M+", label: "Funds Raised" },
-      { value: "40%", label: "Avg Cost Savings" },
-      { value: "60+", label: "Clients Advised" },
-      { value: "15+", label: "Years Experience" },
     ],
   },
 ];

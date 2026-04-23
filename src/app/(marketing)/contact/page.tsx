@@ -40,15 +40,15 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-slate-50 to-white">
+      <section className="pt-32 pb-16 bg-background">
         <div className="container">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">
               Contact Us
             </p>
             <h1 className="text-4xl sm:text-5xl font-bold font-heading tracking-tight">
-              Let&apos;s Build Something{" "}
-              <span className="text-primary">Great Together</span>
+              Let&apos;s Start a{" "}
+              <span className="text-primary">Conversation</span>
             </h1>
             <p className="mt-4 text-lg text-muted-foreground leading-relaxed max-w-2xl">
               Have a project in mind? Need help growing your business? We&apos;d
@@ -60,7 +60,7 @@ export default function ContactPage() {
       </section>
 
       {/* Form + Info */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-background">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
             {/* Form — takes 2 columns */}

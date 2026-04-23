@@ -24,134 +24,46 @@ export interface CaseStudy {
 
 export const caseStudies: CaseStudy[] = [
   {
-    title: "E-commerce Revenue Grew 3x in 6 Months",
-    slug: "ecommerce-revenue-3x",
-    client: "StyleHub",
-    industry: "E-commerce / Fashion",
-    services: ["web-development", "seo", "social-media"],
-    excerpt:
-      "A complete digital overhaul that transformed a struggling online store into a revenue-generating machine.",
-    challenge:
-      "StyleHub had a slow, outdated website with poor mobile experience and virtually no organic traffic. Their conversion rate was below 1% and they were entirely dependent on paid ads for sales.",
-    solution:
-      "We rebuilt their entire e-commerce platform on a modern stack with blazing-fast performance. Simultaneously, we launched an aggressive SEO campaign targeting high-intent product keywords and built a social media presence that drove engaged traffic back to the store.",
-    results: [
-      { metric: "Revenue", before: "$45K/mo", after: "$142K/mo" },
-      { metric: "Organic Traffic", before: "1,200/mo", after: "18,500/mo" },
-      { metric: "Conversion Rate", before: "0.8%", after: "3.2%" },
-      { metric: "Page Load Time", before: "6.2s", after: "1.4s" },
-    ],
-    testimonial: {
-      quote:
-        "They didn't just build us a website — they built us a business. The results speak for themselves. Best investment we've ever made.",
-      author: "Jessica Martinez",
-      role: "Founder, StyleHub",
-    },
-    featured: true,
-  },
-  {
-    title: "SaaS Startup: From 0 to 10K Organic Visitors",
-    slug: "saas-seo-growth",
-    client: "CloudMetrics",
-    industry: "SaaS / Technology",
+    title: "B2B SaaS Product Grows 3x to #1 in a 40-Product Suite",
+    slug: "finder-io-growth",
+    client: "finder.io (500apps)",
+    industry: "SaaS / B2B Technology",
     services: ["seo", "web-development"],
     excerpt:
-      "A targeted SEO strategy that established a new SaaS product as an authority in their niche within 8 months.",
+      "A data-driven SEO and content strategy — built on a custom ML model — that tripled signups and made finder.io the top-performing product in a 40-product SaaS suite.",
     challenge:
-      "CloudMetrics was a new SaaS product with zero domain authority and no organic presence. They were spending $15K/month on Google Ads with diminishing returns and needed a sustainable traffic source.",
+      "finder.io was a B2B email finder tool buried in a 40-product SaaS suite, averaging just 300 signups per month. There was no structured SEO strategy, no content pipeline, and no differentiated positioning. The product was competing for visibility against its own sibling products with no clear path to organic growth.",
     solution:
-      "We developed a comprehensive content strategy targeting the entire buyer journey — from awareness to decision. We built a resource hub with in-depth guides, comparison pages, and technical documentation, all optimized for search.",
+      "We built a custom ML model using Python and NLP to scrape the site and analyze Google Search Console data, identifying high-potential keywords that competitors were missing. This powered a targeted content strategy focused on high-intent B2B queries. We also built a Neural Prophet time-series forecasting model to project growth trajectories and optimize resource allocation — turning gut-feel marketing into data-backed decisions.",
     results: [
-      { metric: "Organic Traffic", before: "0/mo", after: "10,200/mo" },
-      { metric: "Domain Authority", before: "0", after: "34" },
-      { metric: "Ranking Keywords", before: "0", after: "850+" },
-      { metric: "Ad Spend Saved", before: "$15K/mo", after: "$5K/mo" },
+      { metric: "Monthly Signups", before: "300/mo", after: "900/mo" },
+      { metric: "Suite Ranking", before: "Mid-tier", after: "#1 of 40 products" },
+      { metric: "Growth", before: "Flat", after: "3x in 4 months" },
+      { metric: "Forecasted Trajectory", before: "No model", after: "1,800/mo projected" },
     ],
-    testimonial: {
-      quote:
-        "Our organic channel now drives more signups than paid ads at a fraction of the cost. The ROI has been incredible.",
-      author: "Ryan Park",
-      role: "CEO, CloudMetrics",
-    },
+    testimonial: null,
     featured: true,
   },
   {
-    title: "Local Business Dominates City Search Results",
-    slug: "local-business-seo",
-    client: "Premier Dental",
-    industry: "Healthcare / Dental",
-    services: ["seo", "web-development"],
+    title: "Demi-Fine Jewelry Brand Goes D2C with a Custom React Storefront",
+    slug: "mulyam-jewels",
+    client: "Mulyam Jewels",
+    industry: "E-commerce / Jewelry",
+    services: ["web-development"],
     excerpt:
-      "Local SEO strategy that made a dental practice the #1 result in their city for all major keywords.",
+      "A fast, modern e-commerce storefront built from scratch for a demi-fine jewelry brand entering the direct-to-consumer market.",
     challenge:
-      "Premier Dental was invisible in local search results despite being one of the best practices in the city. New patient inquiries were declining and competitors were dominating Google Maps.",
+      "Mulyam Jewels had no online presence and was relying entirely on offline sales. They needed a storefront that could showcase their jewelry with the visual quality the product deserved, while being fast enough to convert mobile-first Indian shoppers.",
     solution:
-      "We redesigned their website with a local SEO focus, optimized their Google Business Profile, built local citations, implemented review generation campaigns, and created location-specific content targeting every service they offer.",
+      "We designed and built a custom React single-page application with Vite for blazing-fast load times. The storefront was built with a mobile-first approach, clean product photography layouts, and a streamlined checkout flow — giving Mulyam Jewels a professional D2C presence from day one.",
     results: [
-      { metric: "Google Maps Ranking", before: "Not ranked", after: "#1 for 12 keywords" },
-      { metric: "Monthly Inquiries", before: "15/mo", after: "65/mo" },
-      { metric: "Website Traffic", before: "800/mo", after: "4,200/mo" },
-      { metric: "Google Reviews", before: "23", after: "180+" },
+      { metric: "Online Presence", before: "None", after: "Live D2C storefront" },
+      { metric: "Tech Stack", before: "No website", after: "React SPA / Vite" },
+      { metric: "Mobile Performance", before: "N/A", after: "Sub-2s load times" },
+      { metric: "Sales Channel", before: "Offline only", after: "Online + Offline" },
     ],
-    testimonial: {
-      quote:
-        "We went from barely getting any calls to being fully booked three weeks out. They completely transformed our online presence.",
-      author: "Dr. Sarah Mitchell",
-      role: "Owner, Premier Dental",
-    },
+    testimonial: null,
     featured: true,
-  },
-  {
-    title: "Restaurant Chain Social Media Transformation",
-    slug: "restaurant-social-media",
-    client: "Fuego Kitchen",
-    industry: "Food & Beverage",
-    services: ["social-media"],
-    excerpt:
-      "A social media strategy that turned a local restaurant into a regional brand with a cult following.",
-    challenge:
-      "Fuego Kitchen had 3 locations but minimal social media presence. Their Instagram had 500 followers with almost no engagement, and they weren't leveraging social media for customer acquisition at all.",
-    solution:
-      "We created a content strategy centered around behind-the-scenes kitchen content, chef stories, and user-generated content campaigns. We launched a micro-influencer program and ran targeted campaigns around new menu launches.",
-    results: [
-      { metric: "Instagram Followers", before: "500", after: "28,000" },
-      { metric: "Monthly Engagement", before: "50", after: "12,000+" },
-      { metric: "In-Store Traffic", before: "Baseline", after: "+40%" },
-      { metric: "UGC Posts/Month", before: "2", after: "150+" },
-    ],
-    testimonial: {
-      quote:
-        "People now come to our restaurants because they saw us on Instagram. Social media went from an afterthought to our biggest marketing channel.",
-      author: "Marco Rivera",
-      role: "Co-founder, Fuego Kitchen",
-    },
-    featured: false,
-  },
-  {
-    title: "Startup Raises $2M After Financial Restructuring",
-    slug: "startup-fundraising",
-    client: "GreenLoop",
-    industry: "CleanTech / Startup",
-    services: ["finance", "business-development"],
-    excerpt:
-      "Financial modeling and business strategy that helped a cleantech startup secure Series A funding.",
-    challenge:
-      "GreenLoop had a great product but messy financials, no clear unit economics, and a pitch that wasn't resonating with investors. They had been rejected by 15 VCs.",
-    solution:
-      "We restructured their financial model, clarified unit economics, built investor-ready projections, and refined their pitch narrative. We also introduced them to our network of climate-focused investors.",
-    results: [
-      { metric: "Funding Raised", before: "$0", after: "$2M Series A" },
-      { metric: "Investor Meetings", before: "2/month", after: "8/month" },
-      { metric: "Burn Rate", before: "$120K/mo", after: "$75K/mo" },
-      { metric: "Runway", before: "4 months", after: "18 months" },
-    ],
-    testimonial: {
-      quote:
-        "They didn't just fix our financials — they changed how we think about our business. We closed our round in 6 weeks after working with them.",
-      author: "Aisha Thompson",
-      role: "CEO, GreenLoop",
-    },
-    featured: false,
   },
 ];
 

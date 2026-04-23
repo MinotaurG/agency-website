@@ -1,162 +1,262 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Target, Heart, Zap, Users, Shield, Lightbulb } from "lucide-react";
+import { ArrowRight, Code, Scale, PenLine, Eye, Target, Lightbulb, Handshake } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SectionHeader } from "@/components/shared/section-header";
+import { ScrollReveal } from "@/components/shared/scroll-reveal";
 
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about our team, mission, and values. We are a full-service digital agency helping businesses grow online.",
+    "Two childhood friends from Hazaribagh, Jharkhand — one from Amazon, one from the Ranchi High Court — building an agency that brings big-company thinking to growing businesses.",
 };
 
-const values = [
-  { icon: Target, title: "Results-Driven", description: "Everything we do is measured against real business outcomes. Vanity metrics don't pay the bills — results do." },
-  { icon: Heart, title: "Client-First", description: "Your success is our success. We treat every project as if it were our own business on the line." },
-  { icon: Zap, title: "Move Fast", description: "We believe in shipping quickly, learning from data, and iterating. Speed is a competitive advantage." },
-  { icon: Shield, title: "Transparency", description: "No hidden fees, no jargon, no surprises. You will always know exactly where your project stands." },
-  { icon: Users, title: "Collaboration", description: "We work with you, not just for you. Your insights combined with our expertise create the best outcomes." },
-  { icon: Lightbulb, title: "Continuous Learning", description: "The digital world evolves fast. We stay ahead by constantly learning, testing, and adopting what works." },
-];
-
 const team = [
-  { name: "Alex Johnson", role: "Founder & CEO", bio: "10+ years building digital products. Passionate about helping businesses grow through technology." },
-  { name: "Sarah Chen", role: "Head of Development", bio: "Full-stack engineer who loves clean code and fast websites. React & Next.js enthusiast." },
-  { name: "Marcus Williams", role: "SEO Strategist", bio: "Data-driven SEO expert. Helped 50+ businesses rank on page one and grow organic traffic." },
-  { name: "Priya Patel", role: "Creative Director", bio: "Award-winning designer who believes great design is invisible — it just works." },
-  { name: "David Kim", role: "Business Consultant", bio: "Former startup founder turned consultant. Specializes in growth strategy and market expansion." },
-  { name: "Emma Rodriguez", role: "Finance Advisor", bio: "CPA with 15 years of experience helping businesses optimize their financial operations." },
+  {
+    name: "Aditya Shubham",
+    role: "Co-Founder & Tech Lead",
+    credentials: "MBA, IIM Visakhapatnam  |  Ex-Amazon",
+    icon: Code,
+    bio: "Started with an economics degree and a spot at CBSE Nationals for football, then the IIM route, then Amazon. Spent over two years managing vendor portfolios for brands like TP-Link and LG across Amazon's European markets. Built automation tools that saved 700+ hours a year and earned a Trailblazer Award. Before any of that, he digitized his family's healthcare clinic back in Hazaribagh — computers, software, lab reports, the whole thing. Plays chess badly and watches too many movies.",
+  },
+  {
+    name: "Adam Khan",
+    role: "Co-Founder & Strategy Lead",
+    credentials: "LLB, NLU Patiala  |  Advocate, Ranchi High Court",
+    icon: Scale,
+    bio: "Four years of practicing civil, criminal, and company law at the Ranchi High Court taught him something most lawyers don't talk about — that the businesses he represented didn't just need legal solutions. They needed someone to help them think ahead. Someone to spot the problems before they became courtroom problems. That realization is why this agency exists. Also the person most likely to make you laugh in a strategy meeting.",
+  },
+  {
+    name: "Simardeep Kaur",
+    role: "Content & SEO Lead",
+    credentials: "MA English Literature, Panjab University  |  Asst. Professor, DAV College Chandigarh",
+    icon: PenLine,
+    bio: "English literature professor at DAV College Chandigarh who has been writing professionally since 2016. From editorial work at Pocket FM to content across tech, lifestyle, and culture, she has spent six years making brands sound like humans instead of press releases. The rare writer who can move between academic rigor and Instagram captions without losing her voice.",
+  },
 ];
 
-const milestones = [
-  { year: "2020", title: "Founded", description: "Started with a vision to make expert digital services accessible to growing businesses." },
-  { year: "2021", title: "First 10 Clients", description: "Built our reputation through word-of-mouth and exceptional results." },
-  { year: "2022", title: "Team of 5", description: "Expanded our team to cover web development, SEO, and social media." },
-  { year: "2023", title: "50+ Projects", description: "Hit a major milestone delivering successful projects across multiple industries." },
-  { year: "2024", title: "Full-Service Agency", description: "Added business development and finance consultancy to become a complete growth partner." },
-  { year: "2025", title: "Scaling Up", description: "Expanding our team and capabilities to serve more clients worldwide." },
+const values = [
+  {
+    icon: Eye,
+    title: "Honesty Over Hype",
+    description:
+      "We will not invent metrics or promise rankings we cannot deliver. If something will not work for your business, we will tell you before you spend a rupee on it.",
+  },
+  {
+    icon: Target,
+    title: "Systems Thinking",
+    description:
+      "We bring the same rigor to a local brand that Amazon applies to a global supply chain. Every recommendation backed by data, every decision traceable.",
+  },
+  {
+    icon: Lightbulb,
+    title: "Strategy First",
+    description:
+      "Websites and social media are tools, not solutions. We start by understanding your business — the revenue, the customers, the gaps — then figure out what to build.",
+  },
+  {
+    icon: Handshake,
+    title: "Built to Last",
+    description:
+      "Quick wins are nice. We would rather build something that compounds over years — systems, content, and relationships that keep working long after a project ends.",
+  },
+];
+
+const highlights = [
+  { label: "Where We Come From", value: "Hazaribagh, Jharkhand" },
+  { label: "Education", value: "IIM Visakhapatnam, NLU Patiala, Panjab University" },
+  { label: "Experience", value: "Amazon, Ranchi High Court, DAV College Chandigarh" },
+  { label: "Partnership", value: "50/50, Founder-Led" },
 ];
 
 export default function AboutPage() {
   return (
     <>
-      <section className="pt-32 pb-16 bg-gradient-to-b from-slate-50 to-white">
+      {/* Hero */}
+      <section className="pt-32 pb-16 bg-background">
         <div className="container">
-          <div className="max-w-3xl">
-            <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">About Us</p>
-            <h1 className="text-4xl sm:text-5xl font-bold font-heading tracking-tight">
-              We are a Team That <span className="text-primary">Actually Cares</span> About Your Growth
-            </h1>
-            <p className="mt-4 text-lg text-muted-foreground leading-relaxed max-w-2xl">
-              We are not just another agency. We are a team of strategists, developers, designers, and consultants who are genuinely invested in helping your business succeed.
-            </p>
+          <ScrollReveal>
+            <div className="max-w-3xl">
+              <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">
+                About Us
+              </p>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading tracking-tight">
+                Built by People,{" "}
+                <span className="text-primary">Not a Pitch Deck</span>
+              </h1>
+              <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-2xl">
+                We are two friends from a small town in Jharkhand who believe
+                growing businesses deserve the same quality of thinking that the
+                biggest companies in the world get.
+              </p>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Our Story */}
+      <section className="py-24 bg-muted/50">
+        <div className="container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            <ScrollReveal>
+              <div>
+                <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">
+                  Our Story
+                </p>
+                <h2 className="text-3xl sm:text-4xl font-bold font-heading">
+                  Same School, Different Paths, One Idea
+                </h2>
+                <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
+                  <p>
+                    We grew up in Hazaribagh, a quiet town in Jharkhand. Same school,
+                    same neighborhood, different ambitions. Aditya went to IIM
+                    Visakhapatnam, then Amazon. Adam went to NLU Patiala, then the
+                    Ranchi High Court.
+                  </p>
+                  <p>
+                    But we kept noticing the same thing from opposite ends. At Amazon,
+                    Aditya saw how large corporations move — the systems, the data, the
+                    precision that drives decisions across global portfolios. At the
+                    High Court, Adam saw how small businesses struggle — not for lack of
+                    effort, but for lack of the kind of forward-looking thinking that
+                    bigger companies take for granted.
+                  </p>
+                  <p>
+                    The businesses Adam represented did not just need legal help. They
+                    needed someone thinking ahead — spotting opportunities and problems
+                    before they escalated. The tools and systems Aditya built at Amazon
+                    should not be exclusive to companies with billion-dollar revenues.
+                  </p>
+                  <p>
+                    After enough conversations about the same frustration, we decided to
+                    stop talking about it and actually do something.{" "}
+                    <strong className="text-foreground">
+                      That is how Elevate Strategy started.
+                    </strong>{" "}
+                    Not to build the next big agency. Just to bring honest, rigorous,
+                    forward-looking thinking to businesses that deserve better —
+                    whether you are a startup in Asansol or a brand in Bengaluru.
+                  </p>
+                </div>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={0.2}>
+              <div className="bg-background rounded-3xl p-8 sm:p-10 border">
+                <h3 className="text-sm font-semibold text-primary uppercase tracking-wider mb-8">
+                  At a Glance
+                </h3>
+                <div className="space-y-6">
+                  {highlights.map((item) => (
+                    <div key={item.label}>
+                      <div className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
+                        {item.label}
+                      </div>
+                      <div className="mt-1 text-base font-medium text-foreground">
+                        {item.value}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
 
-      <section className="py-24 bg-white">
+      {/* Team */}
+      <section className="py-24 bg-background">
         <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div>
-              <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">Our Story</p>
-              <h2 className="text-3xl sm:text-4xl font-bold font-heading">Born From Frustration, Built on Results</h2>
-              <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
-                <p>We started this agency because we saw too many businesses getting burned by agencies that overpromise and underdeliver. Flashy proposals, mediocre execution, and zero accountability.</p>
-                <p>We knew there had to be a better way. So we built an agency around a simple principle: <strong className="text-foreground">deliver real results, or do not bother.</strong></p>
-                <p>Today, we help businesses of all sizes grow their online presence, optimize their operations, and make smarter decisions. Every strategy we create is backed by data, and every project we deliver is built to perform.</p>
-              </div>
-            </div>
-            <div className="bg-slate-50 rounded-3xl p-8 sm:p-10">
-              <div className="grid grid-cols-2 gap-8">
-                {[
-                  { value: "150+", label: "Projects Delivered" },
-                  { value: "50+", label: "Happy Clients" },
-                  { value: "98%", label: "Client Retention" },
-                  { value: "5+", label: "Years of Experience" },
-                ].map((stat) => (
-                  <div key={stat.label}>
-                    <div className="text-3xl sm:text-4xl font-bold font-heading text-primary">{stat.value}</div>
-                    <div className="mt-1 text-sm text-muted-foreground">{stat.label}</div>
+          <SectionHeader
+            label="Our Team"
+            title="The People Behind the Work"
+            description="No stock photos. No invented titles. Just the three of us and what we actually bring."
+          />
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {team.map((member, index) => (
+              <ScrollReveal key={member.name} delay={index * 0.1}>
+                <div className="bg-muted/50 rounded-3xl border p-8 h-full flex flex-col">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0">
+                      <member.icon className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold font-heading">{member.name}</h3>
+                      <p className="text-sm font-medium text-primary">{member.role}</p>
+                    </div>
                   </div>
-                ))}
+                  <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-4">
+                    {member.credentials}
+                  </p>
+                  <p className="text-sm text-muted-foreground leading-relaxed flex-1">
+                    {member.bio}
+                  </p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="py-24 bg-muted/50">
+        <div className="container">
+          <SectionHeader
+            label="What We Believe"
+            title="How We Work"
+            description="Not aspirational slogans. These are the actual principles behind every decision we make."
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {values.map((value, index) => (
+              <ScrollReveal key={value.title} delay={index * 0.1}>
+                <div className="p-8 rounded-3xl bg-background border hover:shadow-md transition-shadow h-full">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                    <value.icon className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-bold font-heading mb-2">{value.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{value.description}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-24">
+        <div className="container">
+          <ScrollReveal>
+            <div className="relative rounded-3xl bg-foreground p-12 sm:p-16 text-center overflow-hidden">
+              <div className="relative z-10">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white font-heading">
+                  We would rather show you than tell you.
+                </h2>
+                <p className="mt-6 text-lg text-white/60 max-w-2xl mx-auto">
+                  Start with a conversation. No pitch, no pressure — just an honest
+                  look at where your business is and where it could go.
+                </p>
+                <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                  <Button
+                    size="lg"
+                    asChild
+                    className="text-sm font-bold uppercase tracking-wider px-8 h-14 rounded-2xl bg-primary text-foreground hover:bg-primary/90"
+                  >
+                    <Link href="/contact">
+                      Start a Conversation
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    asChild
+                    className="text-sm font-bold uppercase tracking-wider px-8 h-14 rounded-2xl bg-transparent text-white border-white/20 hover:bg-white/10 hover:text-white"
+                  >
+                    <Link href="/work">See Our Work</Link>
+                  </Button>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24 bg-slate-50">
-        <div className="container">
-          <SectionHeader label="Our Values" title="What We Stand For" description="These are not just words on a wall. They guide every decision we make." />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {values.map((value) => (
-              <div key={value.title} className="p-6 rounded-2xl bg-white border hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                  <value.icon className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="text-lg font-semibold font-heading mb-2">{value.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{value.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24 bg-white">
-        <div className="container">
-          <SectionHeader label="Our Journey" title="How We Got Here" description="From a small idea to a full-service agency." />
-          <div className="max-w-3xl mx-auto">
-            {milestones.map((milestone, index) => (
-              <div key={milestone.year} className="relative flex gap-6 pb-12 last:pb-0">
-                {index < milestones.length - 1 && (
-                  <div className="absolute left-[23px] top-12 bottom-0 w-px bg-border" />
-                )}
-                <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white font-bold text-xs shrink-0">{milestone.year}</div>
-                <div className="pt-2">
-                  <h3 className="text-lg font-semibold font-heading">{milestone.title}</h3>
-                  <p className="mt-1 text-muted-foreground">{milestone.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24 bg-slate-50">
-        <div className="container">
-          <SectionHeader label="Our Team" title="Meet the People Behind the Work" description="A diverse team of experts united by a shared passion for results." />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {team.map((member) => (
-              <div key={member.name} className="bg-white rounded-2xl border p-6 text-center hover:shadow-md transition-shadow">
-                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-primary font-heading">
-                    {member.name.split(" ").map((n) => n[0]).join("")}
-                  </span>
-                </div>
-                <h3 className="text-lg font-semibold font-heading">{member.name}</h3>
-                <p className="text-sm text-primary font-medium mt-0.5">{member.role}</p>
-                <p className="text-sm text-muted-foreground mt-3 leading-relaxed">{member.bio}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24 bg-white">
-        <div className="container">
-          <div className="relative rounded-3xl bg-gradient-to-br from-primary to-blue-700 p-12 sm:p-16 text-center overflow-hidden">
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff10_1px,transparent_1px),linear-gradient(to_bottom,#ffffff10_1px,transparent_1px)] bg-[size:24px_24px]" />
-            <div className="relative z-10">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white font-heading">Want to Work With Us?</h2>
-              <p className="mt-4 text-lg text-white/80 max-w-2xl mx-auto">We are always looking for exciting projects and great people to work with.</p>
-              <Button size="lg" variant="secondary" asChild className="mt-8 text-base px-8 h-12">
-                <Link href="/contact">
-                  Start a Conversation
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
     </>

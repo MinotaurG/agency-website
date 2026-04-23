@@ -52,7 +52,7 @@ export default async function ServiceDetailPage({
       />
       <FAQJsonLd faqs={service.faqs} />
 
-      <section className="pt-32 pb-16 bg-gradient-to-b from-slate-50 to-white">
+      <section className="pt-32 pb-16 bg-background">
         <div className="container">
           <div className="max-w-3xl">
             <Link href="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors">
@@ -75,20 +75,7 @@ export default async function ServiceDetailPage({
         </div>
       </section>
 
-      <section className="py-12 bg-primary">
-        <div className="container">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {service.stats.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-white font-heading">{stat.value}</div>
-                <div className="mt-1 text-sm text-primary-foreground/80">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-background">
         <div className="container">
           <SectionHeader label="What's Included" title="Everything You Get" description={`Our ${service.title.toLowerCase()} service covers everything you need for success.`} />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -105,7 +92,7 @@ export default async function ServiceDetailPage({
         </div>
       </section>
 
-      <section className="py-24 bg-slate-50">
+      <section className="py-24 bg-muted/50">
         <div className="container">
           <SectionHeader label="How It Works" title={`Our ${service.title} Process`} description="A clear, proven process that delivers results every time." />
           <div className="max-w-3xl mx-auto">
@@ -123,7 +110,7 @@ export default async function ServiceDetailPage({
         </div>
       </section>
 
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-background">
         <div className="container">
           <SectionHeader label="FAQ" title="Frequently Asked Questions" description={`Common questions about our ${service.title.toLowerCase()} services.`} />
           <div className="max-w-3xl mx-auto space-y-6">
@@ -137,7 +124,7 @@ export default async function ServiceDetailPage({
         </div>
       </section>
 
-      <section className="py-24 bg-slate-50">
+      <section className="py-24 bg-muted/50">
         <div className="container">
           <SectionHeader label="Explore More" title="Other Services" description="Combine services for maximum impact on your business." />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -154,14 +141,13 @@ export default async function ServiceDetailPage({
         </div>
       </section>
 
-      <section className="py-24 bg-white">
+      <section className="py-24">
         <div className="container">
-          <div className="relative rounded-3xl bg-gradient-to-br from-primary to-blue-700 p-12 sm:p-16 text-center overflow-hidden">
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff10_1px,transparent_1px),linear-gradient(to_bottom,#ffffff10_1px,transparent_1px)] bg-[size:24px_24px]" />
+          <div className="relative rounded-3xl bg-foreground p-12 sm:p-16 text-center overflow-hidden">
             <div className="relative z-10">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white font-heading">Ready to Get Started with {service.title}?</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold text-white font-heading">Ready to get started with {service.title}?</h2>
               <p className="mt-4 text-lg text-white/80 max-w-2xl mx-auto">Book a free consultation and let us discuss how we can help your business grow.</p>
-              <Button size="lg" variant="secondary" asChild className="mt-8 text-base px-8 h-12">
+              <Button size="lg" asChild className="mt-8 text-sm font-bold uppercase tracking-wider px-8 h-14 rounded-2xl bg-primary text-foreground hover:bg-primary/90">
                 <Link href="/contact">Get Free Consultation<ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
             </div>

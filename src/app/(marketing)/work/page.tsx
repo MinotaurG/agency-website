@@ -23,7 +23,7 @@ export default function WorkPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-slate-50 to-white">
+      <section className="pt-32 pb-16 bg-background">
         <div className="container">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">
@@ -43,7 +43,7 @@ export default function WorkPage() {
       </section>
 
       {/* Case Studies Grid */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-background">
         <div className="container">
           <div className="space-y-8">
             {caseStudies.map((study, index) => (
@@ -85,7 +85,7 @@ export default function WorkPage() {
                       {study.results.map((result) => (
                         <div
                           key={result.metric}
-                          className="bg-slate-50 rounded-xl p-4"
+                          className="bg-muted rounded-xl p-4"
                         >
                           <p className="text-xs text-muted-foreground mb-1">
                             {result.metric}
@@ -116,7 +116,7 @@ export default function WorkPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-muted/50">
         <div className="container">
           <div className="text-center max-w-2xl mx-auto">
             <h2 className="text-3xl font-bold font-heading">
