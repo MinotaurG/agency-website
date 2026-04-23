@@ -33,6 +33,12 @@ export const mainNav = [
         icon: "calculator",
         description: "Financial planning & advisory",
       },
+      {
+        title: "AI Solutions",
+        href: "/services/ai-solutions",
+        icon: "brain",
+        description: "AI tools that solve real problems",
+      },
     ],
   },
   { title: "Work", href: "/work" },
@@ -48,6 +54,7 @@ export const footerNav = {
     { title: "Social Media", href: "/services/social-media" },
     { title: "Business Development", href: "/services/business-development" },
     { title: "Finance Consultancy", href: "/services/finance-consultancy" },
+    { title: "AI Solutions", href: "/services/ai-solutions" },
   ],
   company: [
     { title: "About", href: "/about" },

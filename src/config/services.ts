@@ -4,6 +4,7 @@ import {
   Share2,
   TrendingUp,
   Calculator,
+  Brain,
   type LucideIcon,
 } from "lucide-react";
 
@@ -254,6 +255,45 @@ export const services: Service[] = [
       { question: "What industries do you serve?", answer: "We work across industries including SaaS, e-commerce, professional services, manufacturing, and startups. Our principles apply broadly." },
       { question: "Can you help us prepare for fundraising?", answer: "Absolutely. We create investor-ready financial models, projections, and help you tell a compelling financial story to potential investors." },
       { question: "How do you charge for finance consultancy?", answer: "We offer both project-based pricing for specific deliverables and monthly retainers for ongoing advisory. We'll recommend the best fit during our consultation." },
+    ],
+  },
+  {
+    title: "AI Solutions",
+    slug: "ai-solutions",
+    description:
+      "AI-powered tools that automate, predict, and personalize — built by engineers, not just marketed by agencies.",
+    longDescription:
+      "We build practical AI solutions that solve real business problems. From chatbots that handle customer queries around the clock to ML models that predict demand and optimize marketing — our AI work is built on actual engineering experience, not just API wrappers.",
+    icon: Brain,
+    color: "bg-violet-500/10 text-violet-500",
+    features: [
+      "AI Chatbots & Virtual Assistants",
+      "AI Content Generation",
+      "AI-Powered SEO & Analytics",
+      "Predictive Analytics & Forecasting",
+      "Conversational Commerce",
+      "AI Product Recommendations",
+    ],
+    detailedFeatures: [
+      { title: "AI Chatbots & Virtual Assistants", description: "WhatsApp and website chatbots that answer customer questions, recommend products, and handle orders — available 24/7 without adding headcount." },
+      { title: "AI Content Generation", description: "Generate SEO-optimized product descriptions, social media captions, and blog drafts at scale. Hours of copywriting condensed into minutes." },
+      { title: "AI-Powered SEO & Analytics", description: "Custom ML models that analyze search data, identify keyword opportunities, and predict content performance — the same approach that drove 3x growth for finder.io." },
+      { title: "Predictive Analytics & Forecasting", description: "Demand forecasting, sales prediction, and trend analysis using time-series models. Know what is coming before it arrives." },
+      { title: "Conversational Commerce", description: "Full shopping experiences inside WhatsApp and Instagram DMs. Customers browse, ask questions, and buy without ever leaving the chat." },
+      { title: "AI Product Recommendations", description: "Personalized product suggestions based on browsing behavior, purchase history, and customer segments. Higher average order values, automatically." },
+    ],
+    process: [
+      { step: 1, title: "Problem Mapping", description: "We identify which parts of your business would benefit most from AI — not everything needs it, and we will tell you that." },
+      { step: 2, title: "Data Assessment", description: "We evaluate your existing data sources and determine what is needed to build effective AI solutions." },
+      { step: 3, title: "Build & Train", description: "We build, train, and test the AI models or integrations using your real business data." },
+      { step: 4, title: "Deploy & Integrate", description: "We deploy the solution into your existing workflows — website, WhatsApp, CRM, or wherever it needs to live." },
+      { step: 5, title: "Monitor & Improve", description: "AI gets better with data. We monitor performance and retrain models as your business evolves." },
+    ],
+    faqs: [
+      { question: "Do we need a lot of data to start?", answer: "Not always. Some solutions like chatbots and content generation work with minimal data. Predictive models do need historical data — we will assess what you have and what is realistic." },
+      { question: "Is this just ChatGPT with a wrapper?", answer: "No. While we use foundation models where appropriate, we also build custom ML models for specific problems — like the SEO forecasting model we built for finder.io. The right tool depends on the problem." },
+      { question: "How long does it take to see results?", answer: "A chatbot can be live in 2-3 weeks. Predictive models and recommendation engines typically take 4-8 weeks to build, train, and deploy." },
+      { question: "What makes you different from other AI agencies?", answer: "Our tech lead was selected into Amazon's ATLAS SDE program — 80 out of 14,000 employees. We have built production ML models, not just prototypes. We focus on solutions that actually move business metrics." },
     ],
   },
 ];

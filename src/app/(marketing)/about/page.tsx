@@ -40,7 +40,7 @@ const values = [
     icon: Eye,
     title: "Honesty Over Hype",
     description:
-      "We will not invent metrics or promise rankings we cannot deliver. If something will not work for your business, we will tell you before you spend a rupee on it.",
+      "Every number we share is real. Every recommendation comes with the reasoning behind it. You will always know exactly where your money is going and why.",
   },
   {
     icon: Target,
@@ -52,7 +52,7 @@ const values = [
     icon: Lightbulb,
     title: "Strategy First",
     description:
-      "Websites and social media are tools, not solutions. We start by understanding your business — the revenue, the customers, the gaps — then figure out what to build.",
+      "We start by understanding your business — the revenue, the customers, the gaps. The right strategy comes first, then we figure out what to build.",
   },
   {
     icon: Handshake,

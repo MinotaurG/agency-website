@@ -95,21 +95,6 @@ export function Hero() {
               <Link href="/work">See Our Work</Link>
             </Button>
           </motion.div>
-
-          <motion.div
-            className="mt-20 flex items-center gap-8 text-sm text-muted-foreground"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-          >
-            <span>IIM Visakhapatnam</span>
-            <span className="w-px h-4 bg-border" />
-            <span>NLU Patiala</span>
-            <span className="w-px h-4 bg-border" />
-            <span>Amazon</span>
-            <span className="w-px h-4 bg-border" />
-            <span>Ranchi High Court</span>
-          </motion.div>
         </div>
       </div>
     </section>

@@ -9,7 +9,7 @@ import { StaggerChildren, StaggerItem } from "@/components/shared/stagger-childr
 
 export function ServicesGrid() {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-background">
       <div className="container">
         <ScrollReveal>
           <div className="text-center max-w-2xl mx-auto mb-16">

@@ -13,7 +13,7 @@ const steps = [
 
 export function ProcessSteps() {
   return (
-    <section className="py-24 bg-slate-50">
+    <section className="py-24 bg-muted/50">
       <div className="container">
         <ScrollReveal>
           <div className="text-center max-w-2xl mx-auto mb-16">
@@ -21,7 +21,7 @@ export function ProcessSteps() {
               How We Work
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold font-heading">
-              Our Proven Process
+              Our Process
             </h2>
             <p className="mt-4 text-muted-foreground text-lg">
               A systematic approach that delivers consistent results.
