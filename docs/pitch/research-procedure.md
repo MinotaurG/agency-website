@@ -89,14 +89,14 @@ URL:
 **What to find:** Latest annual turnover / total income
 
 ```
-RESULT:
-Company name (as shown):
-Revenue / Turnover:
-Financial Year:
-Authorized Capital:
-Paid-up Capital:
-Source: Tofler / ZaubaCorp
-URL:
+RESULT: 
+Company name (as shown):SANSPAREILS GREENLANDS PRIVATE LIMITED
+Revenue / Turnover: 300 - 400 cr 
+Financial Year: 2024
+Authorized Capital: 40 cr
+Paid-up Capital:  35 cr 
+Source: Tofler
+URL: https://www.tofler.in/sanspareils-greenlands-private-limited/company/U36911UP1979PTC004761
 (If paywalled, note what IS visible for free)
 ```
 
@@ -110,12 +110,12 @@ URL:
 **CIN:** U36996PB1969PTC002712
 
 ```
-RESULT:
-Company name (as shown):
-Revenue / Turnover:
-Financial Year:
-Authorized Capital:
-Paid-up Capital:
+RESULT: 
+Company name (as shown): Sareen Sports Industries
+Revenue / Turnover: < 1 cr
+Financial Year: 2024 
+Authorized Capital: 1 cr
+Paid-up Capital: 10 laks
 Source: Tofler / ZaubaCorp
 URL:
 ```
@@ -158,7 +158,7 @@ URL:
 
 ```
 RESULT:
-SD18 products found: YES / NO
+SD18 products found:  NO
 If yes, how many:
 Product names (list a few):
 If no, what shows instead:
@@ -265,12 +265,12 @@ Sponsored vs organic (approx):
 
 ```
 RESULT:
-"SG cricket" — total results: ___
-"SS cricket" — total results: ___
-"DSC cricket" — total results: ___
-"Jaspo cricket" — total results: ___
-"Klapp cricket" — total results: ___
-"CW cricket" — total results: ___
+"SG cricket" — total results: over 3000 results
+"SS cricket" — total results: over 3000
+"DSC cricket" — total results: over 1000
+"Jaspo cricket" — total results: 818
+"Klapp cricket" — total results: 150
+"CW cricket" — total results: 915
 ```
 
 **Used in:** Amazon Deck Slide 2, 8 — currently says "SG 500+, SS 300+"
@@ -282,10 +282,10 @@ RESULT:
 **What to find:** Amazon.in monthly unique visitors or visits
 
 ```
-RESULT:
-Monthly visitors/visits:
-Source:
-URL:
+RESULT: 
+Monthly visitors/visits: 279.25 M
+Source: https://www.semrush.com/website/amazon.in/overview/
+URL: https://www.semrush.com/website/amazon.in/overview/
 ```
 
 **Used in:** Amazon Deck Slide 2, 12 — currently says "350M+"

@@ -1,0 +1,41 @@
+.main-header_area .header-middle {padding:10px 0 !important;}
+.main-header_area .header-middle .header-search-area #suggestions {background: transparent;}
+.social-link ul li.facebook a,.social-link ul li.twitter a,.social-link ul li.instagram a,.social-link ul li.youtube a,.social-link ul li.linkedin a,.social-link ul li.pinterest a{border:none;transition:all .5s ease-in-out;background:#1c3c4c;}
+.social-link ul li.facebook a i,.social-link ul li.twitter a i,.social-link ul li.instagram a i,.social-link ul li.youtube a i,.social-link ul li.linkedin a i,.social-link ul li.pinterest a i{color:#ffffff!important;}
+.social-link ul li.facebook a{background:#1773ea;}
+.social-link ul li.twitter a{background:#000000;}
+.social-link ul li.instagram a{background:#ff2360;}
+.social-link ul li.youtube a{background:#f70000;}
+.social-link ul li.linkedin a{background:#0170ad;}
+.social-link ul li.pinterest a{background:#b7081b;}
+.price-box .old-price{color:#0eab14!important;}
+.productSlider .swiper-button-prev, .productSlider .swiper-button-next{opacity:1!important;visibility:visible!important;background:#0d4862;width:44px;height:44px;border-radius:12px;border:none;display:none;}
+.productSlider .swiper-button-prev:hover, .productSlider .swiper-button-next:hover{color:#fff!important;}
+.productSlider:hover .swiper-button-prev,.productSlider:hover .swiper-button-next{display:block;text-align:center;}
+
+/*This media query is used to adjust the zoom level of the container based on the screen size. (start)*/
+@media only screen and (min-width: 1400px) {
+    .container{zoom:1.2;}
+}
+@media only screen and (min-width: 1600px) {
+    .container{zoom:1.3;}
+}
+@media only screen and (min-width: 2000px) {
+    .container{zoom:1.6;}
+}
+@media only screen and (min-width: 2500px) {
+    .container{zoom:2.1;}
+}
+@media only screen and (min-width: 3000px) {
+    .container{zoom:3.1;}
+}
+@media only screen and (min-width: 3500px) {
+    .container{zoom:3.4;}
+}
+@media only screen and (min-width: 5000px) {
+    .container{zoom:4.45;}
+}
+@media only screen and (min-width: 6000px) {
+    .container{zoom:6;}
+}
+/*This media query is used to adjust the zoom level of the container based on the screen size. (end)*/

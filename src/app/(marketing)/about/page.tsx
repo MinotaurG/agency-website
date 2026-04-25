@@ -15,14 +15,14 @@ const team = [
   {
     name: "Aditya Shubham",
     role: "Co-Founder & Tech Lead",
-    credentials: "MBA, IIM Visakhapatnam  |  Ex-Amazon",
+    credentials: "MBA, IIM (Indian Institute of Management)  |  Ex-Amazon",
     icon: Code,
     bio: "Started with an economics degree and a spot at CBSE Nationals for football, then the IIM route, then Amazon. Spent over two years managing vendor portfolios for brands like TP-Link and LG across Amazon's European markets. Built automation tools that saved 700+ hours a year and earned a Trailblazer Award. Before any of that, he digitized his family's healthcare clinic back in Hazaribagh — computers, software, lab reports, the whole thing. Plays chess badly and watches too many movies.",
   },
   {
     name: "Adam Khan",
     role: "Co-Founder & Strategy Lead",
-    credentials: "LLB, NLU Patiala  |  Advocate, Ranchi High Court",
+    credentials: "B.A. L.L.B., National Law University (NLU)  |  Research Analyst & Advocate, Ranchi High Court (4+ years)",
     icon: Scale,
     bio: "Four years of practicing civil, criminal, and company law at the Ranchi High Court taught him something most lawyers don't talk about — that the businesses he represented didn't just need legal solutions. They needed someone to help them think ahead. Someone to spot the problems before they became courtroom problems. That realization is why this agency exists. Also the person most likely to make you laugh in a strategy meeting.",
   },
@@ -64,7 +64,7 @@ const values = [
 
 const highlights = [
   { label: "Where We Come From", value: "Hazaribagh, Jharkhand" },
-  { label: "Education", value: "IIM Visakhapatnam, NLU Patiala, Panjab University" },
+  { label: "Education", value: "IIM, NLU, Panjab University" },
   { label: "Experience", value: "Amazon, Ranchi High Court, DAV College Chandigarh" },
   { label: "Partnership", value: "50/50, Founder-Led" },
 ];
@@ -109,8 +109,8 @@ export default function AboutPage() {
                 <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
                   <p>
                     We grew up in Hazaribagh, a quiet town in Jharkhand. Same school,
-                    same neighborhood, different ambitions. Aditya went to IIM
-                    Visakhapatnam, then Amazon. Adam went to NLU Patiala, then the
+                    same neighborhood, different ambitions. Aditya went to
+                    IIM, then Amazon. Adam went to NLU, then the
                     Ranchi High Court.
                   </p>
                   <p>
