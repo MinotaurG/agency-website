@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1280">
+<title>SD18 Sports — Amazon India Opportunity & Service Pricing | Elevate Strategy</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --dark: #0f172a;
+    --dark2: #1e293b;
+    --navy: #0d4862;
+    --green: #16a34a;
+    --green-light: #f0fdf4;
+    --green-dim: #dcfce7;
+    --red: #dc2626;
+    --red-light: #fef2f2;
+    --red-dim: #fecaca;
+    --orange: #f59e0b;
+    --orange-light: #fffbeb;
+    --orange-dim: #fef3c7;
+    --cream: #faf8f5;
+    --amazon: #ff9900;
+    --amazon-dark: #232f3e;
+    --gray-50: #f8fafc;
+    --gray-100: #f1f5f9;
+    --gray-200: #e2e8f0;
+    --gray-300: #cbd5e1;
+    --gray-400: #94a3b8;
+    --gray-500: #64748b;
+    --gray-600: #475569;
+    --gray-700: #334155;
+    --gray-800: #1e293b;
+    --text: #1e293b;
+    --text-muted: #64748b;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; font-weight: 300; color: var(--text); }
+  @page { size: 1280px 720px; margin: 0; }
+  .slide {
+    width: 1280px; height: 720px;
+    padding: 56px 64px;
+    page-break-after: always;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .slide:last-child { page-break-after: avoid; }
+  h1 { font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 40px; line-height: 1.15; color: var(--text); }
+  h2 { font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 28px; line-height: 1.2; color: var(--text); }
+  h3 { font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 18px; line-height: 1.3; color: var(--text); }
+  p { font-size: 14px; line-height: 1.7; color: var(--gray-600); }
+  .label {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--green); margin-bottom: 8px; display: inline-block;
+  }
+  .label-orange { color: var(--amazon); }
+  .label-red { color: var(--red); }
+  .subtitle { font-size: 16px; color: var(--gray-500); font-weight: 300; margin-top: 4px; }
+  .cols { display: flex; gap: 32px; flex: 1; }
+  .cols-tight { gap: 20px; }
+  .col { flex: 1; display: flex; flex-direction: column; }
+  .card {
+    background: white; border: 1px solid var(--gray-200); border-radius: 12px;
+    padding: 24px; position: relative;
+  }
+  .card-sm { padding: 16px 20px; }
+  .card-dark { background: var(--dark); border-color: var(--dark2); color: white; }
+  .card-green { background: var(--green-light); border-color: var(--green-dim); }
+  .card-red { background: var(--red-light); border-color: var(--red-dim); }
+  .card-cream { background: var(--cream); border-color: var(--gray-200); }
+  .card-orange { background: var(--orange-light); border-color: var(--orange-dim); }
+  .card-amazon { background: var(--amazon-dark); border-color: #37475a; color: white; }
+  .big-num {
+    font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 48px;
+    line-height: 1; color: var(--green);
+  }
+  .big-num-red { color: var(--red); }
+  .big-num-navy { color: var(--navy); }
+  .big-num-amazon { color: var(--amazon); }
+  .big-num-sm { font-size: 36px; }
+  .big-num-xs { font-size: 28px; }
+  .tag {
+    display: inline-block; padding: 3px 10px; border-radius: 6px;
+    font-size: 10px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;
+  }
+  .tag-green { background: var(--green-dim); color: var(--green); }
+  .tag-red { background: var(--red-dim); color: var(--red); }
+  .tag-orange { background: #fef3c7; color: #b45309; }
+  .tag-gray { background: var(--gray-100); color: var(--gray-500); }
+  .tag-amazon { background: #ff990022; color: var(--amazon); }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  th {
+    text-align: left; padding: 10px 14px; font-weight: 600; font-size: 11px;
+    letter-spacing: 0.05em; text-transform: uppercase; color: var(--gray-500);
+    background: var(--gray-50); border-bottom: 2px solid var(--gray-200);
+  }
+  td {
+    padding: 10px 14px; border-bottom: 1px solid var(--gray-100);
+    color: var(--gray-600); vertical-align: top;
+  }
+  td strong { color: var(--text); font-weight: 600; }
+  .bar { height: 8px; border-radius: 4px; background: var(--gray-100); margin-top: 6px; }
+  .bar-fill { height: 100%; border-radius: 4px; }
+  .bar-green { background: var(--green); }
+  .bar-red { background: var(--red); }
+  .bar-orange { background: var(--orange); }
+  .divider { height: 1px; background: var(--gray-200); margin: 16px 0; }
+  .spacer { flex: 1; }
+  .footer-brand {
+    position: absolute; bottom: 20px; right: 40px;
+    font-size: 10px; color: var(--gray-400); font-weight: 400;
+    letter-spacing: 0.05em;
+  }
+  .page-num {
+    position: absolute; bottom: 20px; left: 40px;
+    font-size: 10px; color: var(--gray-400);
+  }
+  .list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+  .list li {
+    font-size: 13px; line-height: 1.5; color: var(--gray-600); padding-left: 16px; position: relative;
+  }
+  .list li::before {
+    content: ''; position: absolute; left: 0; top: 7px;
+    width: 6px; height: 6px; border-radius: 50%; background: var(--green);
+  }
+  .list-orange li::before { background: var(--amazon); }
+  .list-red li::before { background: var(--red); }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+  .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 16px; }
+  .mt-auto { margin-top: auto; }
+  .mt-8 { margin-top: 8px; }
+  .mt-12 { margin-top: 12px; }
+  .mt-16 { margin-top: 16px; }
+  .mt-20 { margin-top: 20px; }
+  .mt-24 { margin-top: 24px; }
+  .mb-4 { margin-bottom: 4px; }
+  .mb-8 { margin-bottom: 8px; }
+  .mb-12 { margin-bottom: 12px; }
+  .mb-16 { margin-bottom: 16px; }
+  .mb-20 { margin-bottom: 20px; }
+  .mb-24 { margin-bottom: 24px; }
+  .text-xs { font-size: 12px; line-height: 1.6; }
+  .text-sm { font-size: 13px; line-height: 1.6; }
+  .text-white { color: white; }
+  .text-muted { color: var(--gray-400); }
+  .text-center { text-align: center; }
+  .fw-400 { font-weight: 400; }
+  .fw-500 { font-weight: 500; }
+  .fw-600 { font-weight: 600; }
+  .flex { display: flex; }
+  .items-center { align-items: center; }
+  .gap-8 { gap: 8px; }
+  .gap-12 { gap: 12px; }
+  .gap-16 { gap: 16px; }
+  .highlight-orange { color: var(--amazon); font-weight: 600; }
+  .source { font-size: 9px; color: var(--gray-400); font-style: italic; position: absolute; bottom: 36px; left: 64px; }
+</style>
+</head>
+<body>
+
+<!-- ─── SLIDE 1: TITLE ─── -->
+<div class="slide" style="background: var(--amazon-dark); justify-content: center; align-items: center; text-align: center;">
+  <div>
+    <div style="display:inline-block; padding: 6px 16px; border-radius: 8px; background: rgba(255,153,0,0.15); margin-bottom: 24px;">
+      <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--amazon);">New Revenue Channel</span>
+    </div>
+    <h1 style="color: white; font-size: 48px; margin-bottom: 12px;">Sell SD18 on Amazon India</h1>
+    <p style="color: var(--gray-400); font-size: 18px; font-weight: 300; max-width: 700px; margin: 0 auto;">Reach millions of cricket buyers. Keep 72% of every sale. Start in under 2 weeks.</p>
+    <div style="width: 48px; height: 2px; background: var(--amazon); margin: 40px auto 24px;"></div>
+    <p style="color: var(--gray-500); font-size: 13px;">Prepared by Elevate Strategy &middot; April 2026</p>
+    <p style="color: var(--gray-600); font-size: 11px; margin-top: 4px;">Confidential &mdash; Prepared exclusively for SD18 Sports</p>
+  </div>
+  <span class="footer-brand" style="color: var(--gray-600);">Elevate Strategy &middot; Confidential</span>
+</div>
+
+<!-- ─── SLIDE 2: WHY AMAZON ─── -->
+<div class="slide">
+  <div class="label label-orange">The Opportunity</div>
+  <h1 class="mb-8">Why Amazon India?</h1>
+  <p class="mb-24">Amazon India is where people <strong>search</strong> for cricket equipment. Your website is where they <strong>discover your brand</strong>. You need both.</p>
+  <div class="cols" style="flex:1;">
+    <div style="flex:1; display:flex; flex-direction:column; gap:14px;">
+      <div class="card card-sm" style="display:flex; align-items:center; gap:16px;">
+        <div class="big-num big-num-xs big-num-amazon" style="flex-shrink:0; min-width:100px;">350M+</div>
+        <div>
+          <h3 style="font-size:13px;" class="mb-4">Monthly Visitors</h3>
+          <p class="text-xs">Amazon India is the #1 e-commerce platform. Millions actively search for cricket equipment every month.</p>
+        </div>
+      </div>
+      <div class="card card-sm" style="display:flex; align-items:center; gap:16px;">
+        <div class="big-num big-num-xs big-num-amazon" style="flex-shrink:0; min-width:100px;">70%+</div>
+        <div>
+          <h3 style="font-size:13px;" class="mb-4">Product Search Starts Here</h3>
+          <p class="text-xs">Most Indian consumers begin their product search on Amazon or Flipkart &mdash; not Google. If you are not listed, you do not exist for these buyers.</p>
+        </div>
+      </div>
+      <div class="card card-sm" style="display:flex; align-items:center; gap:16px;">
+        <div class="big-num big-num-xs" style="flex-shrink:0; min-width:100px; color: var(--navy);">Trust</div>
+        <div>
+          <h3 style="font-size:13px;" class="mb-4">Built-in Buyer Confidence</h3>
+          <p class="text-xs">Amazon handles payments, returns, and delivery. Buyers trust Amazon checkout far more than an unfamiliar website. This removes the biggest barrier to first purchase.</p>
+        </div>
+      </div>
+    </div>
+    <div class="card card-amazon" style="flex:0.8; display:flex; flex-direction:column; justify-content:center; text-align:center; padding:28px;">
+      <p class="text-xs text-muted mb-12">Currently on Amazon India</p>
+      <div style="font-family:'DM Sans'; font-size:72px; font-weight:700; color: var(--amazon); margin-bottom:16px;">0</div>
+      <p style="color: white; font-size: 15px; font-weight: 500; margin-bottom: 8px;">SD18 products listed</p>
+      <div style="height:1px; background:#37475a; margin: 16px 0;"></div>
+      <p class="text-xs" style="color: var(--gray-400); line-height:1.6;">Meanwhile, SG has 500+ listings. SS has 300+. DSC has 200+. Even small brands like Jaspo and Klapp have 50+ products on Amazon.</p>
+      <div style="height:1px; background:#37475a; margin: 16px 0;"></div>
+      <p class="text-xs" style="color: var(--amazon);">Every day SD18 is not on Amazon is a day customers buy from someone else.</p>
+    </div>
+  </div>
+  <p class="source">Verify: Search "SD18 cricket" on amazon.in. Visitor data: SimilarWeb / Amazon India press releases.</p>
+  <span class="page-num">02</span>
+  <span class="footer-brand">Elevate Strategy &middot; Confidential</span>
+</div>
+
+<!-- ─── SLIDE 3: HOW IT WORKS ─── -->
+<div class="slide">
+  <div class="label label-orange">The Process</div>
+  <h1 class="mb-8">Getting SD18 on Amazon &mdash; Step by Step</h1>
+  <p class="mb-24">You already have everything you need. GST registration, products, and a brand. We handle the rest.</p>
+  <div style="display:flex; gap:16px; flex:1;">
+    <div class="card card-sm" style="flex:1; display:flex; flex-direction:column;">
+      <div style="width:36px; height:36px; border-radius:8px; background: var(--amazon); color:white; display:flex; align-items:center; justify-content:center; font-family:'DM Sans'; font-weight:700; font-size:16px; margin-bottom:12px;">1</div>
+      <h3 style="font-size:14px;" class="mb-8">Register as Seller</h3>
+      <ul class="list list-orange" style="gap:6px; flex:1;">
+        <li>Create Amazon Seller Central account</li>
+        <li>Submit GST certificate + PAN</li>
+        <li>Link bank account for payouts</li>
+        <li>Choose Professional plan (&#8377;499/mo)</li>
+      </ul>
+      <div class="tag tag-orange mt-12">Day 1&ndash;2</div>
+    </div>
+    <div class="card card-sm" style="flex:1; display:flex; flex-direction:column;">
+      <div style="width:36px; height:36px; border-radius:8px; background: var(--amazon); color:white; display:flex; align-items:center; justify-content:center; font-family:'DM Sans'; font-weight:700; font-size:16px; margin-bottom:12px;">2</div>
+      <h3 style="font-size:14px;" class="mb-8">List Products</h3>
+      <ul class="list list-orange" style="gap:6px; flex:1;">
+        <li>Professional product photography</li>
+        <li>Keyword-optimized titles &amp; descriptions</li>
+        <li>Category mapping (Sports &rarr; Cricket)</li>
+        <li>Competitive pricing strategy</li>
+      </ul>
+      <div class="tag tag-orange mt-12">Day 3&ndash;7</div>
+    </div>
+    <div class="card card-sm" style="flex:1; display:flex; flex-direction:column;">
+      <div style="width:36px; height:36px; border-radius:8px; background: var(--amazon); color:white; display:flex; align-items:center; justify-content:center; font-family:'DM Sans'; font-weight:700; font-size:16px; margin-bottom:12px;">3</div>
+      <h3 style="font-size:14px;" class="mb-8">Choose Fulfillment</h3>
+      <ul class="list list-orange" style="gap:6px; flex:1;">
+        <li><strong>Easy Ship</strong> (recommended): Amazon picks up from you</li>
+        <li><strong>FBA</strong>: Amazon stores + ships (higher fees)</li>
+        <li><strong>Self Ship</strong>: You handle everything</li>
+        <li>We recommend Easy Ship to start</li>
+      </ul>
+      <div class="tag tag-orange mt-12">Day 7&ndash;10</div>
+    </div>
+    <div class="card card-sm" style="flex:1; display:flex; flex-direction:column;">
+      <div style="width:36px; height:36px; border-radius:8px; background: var(--green); color:white; display:flex; align-items:center; justify-content:center; font-family:'DM Sans'; font-weight:700; font-size:16px; margin-bottom:12px;">4</div>
+      <h3 style="font-size:14px;" class="mb-8">Go Live &amp; Grow</h3>
+      <ul class="list" style="gap:6px; flex:1;">
+        <li>Products go live on Amazon India</li>
+        <li>Launch Amazon PPC campaigns</li>
+        <li>Collect first reviews organically</li>
+        <li>Optimize listings based on data</li>
+      </ul>
+      <div class="tag tag-green mt-12">Day 10&ndash;14</div>
+    </div>
+  </div>
+  <p class="mt-16 text-sm fw-500" style="color: var(--text);">Total time from decision to first live product: approximately 2 weeks.</p>
+  <span class="page-num">03</span>
+  <span class="footer-brand">Elevate Strategy &middot; Confidential</span>
+</div>
+
+<!-- ─── SLIDE 4: REQUIREMENTS ─── -->
+<div class="slide">
+  <div class="label label-orange">What You Need</div>
+  <h1 class="mb-8">Documents &amp; Requirements</h1>
+  <p class="mb-24">Most of these you already have. The key decision is whether to register the SD18 trademark for Brand Registry.</p>
+  <div class="cols" style="flex:1;">
+    <div style="flex:1.2; display:flex; flex-direction:column; gap:12px;">
+      <div class="card card-green card-sm" style="display:flex; align-items:center; gap:16px;">
+        <svg width="24" height="24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+        <div>
+          <h3 style="font-size:13px;">GST Registration</h3>
+          <p class="text-xs">SD18 already has this &mdash; mandatory for Amazon sellers</p>
+        </div>
+      </div>
+      <div class="card card-green card-sm" style="display:flex; align-items:center; gap:16px;">
+        <svg width="24" height="24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+        <div>
+          <h3 style="font-size:13px;">Business PAN Card</h3>
+          <p class="text-xs">Required for tax compliance and seller verification</p>
+        </div>
+      </div>
+      <div class="card card-green card-sm" style="display:flex; align-items:center; gap:16px;">
+        <svg width="24" height="24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+        <div>
+          <h3 style="font-size:13px;">Bank Account</h3>
+          <p class="text-xs">For receiving Amazon payouts (every 7 days)</p>
+        </div>
+      </div>
+      <div class="card card-green card-sm" style="display:flex; align-items:center; gap:16px;">
+        <svg width="24" height="24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+        <div>
+          <h3 style="font-size:13px;">Products &amp; Inventory</h3>
+          <p class="text-xs">Physical stock ready to ship from Asansol store</p>
+        </div>
+      </div>
+      <div class="card card-orange card-sm" style="display:flex; align-items:center; gap:16px;">
+        <svg width="24" height="24" fill="none" stroke="#b45309" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h0"/></svg>
+        <div>
+          <h3 style="font-size:13px;">Trademark Registration (Optional but Recommended)</h3>
+          <p class="text-xs">Unlocks Amazon Brand Registry &rarr; A+ Content, brand store, brand analytics, protection from counterfeits. Check status on ipindia.gov.in</p>
+        </div>
+      </div>
+    </div>
+    <div style="flex:0.8; display:flex; flex-direction:column; gap:12px;">
+      <div class="card card-dark" style="flex:1; display:flex; flex-direction:column; padding:24px;">
+        <div class="tag tag-amazon mb-16">Brand Registry Benefits</div>
+        <h3 style="color:white; font-size:15px; margin-bottom:16px;">Why Register the SD18 Trademark?</h3>
+        <ul class="list list-orange" style="gap:8px;">
+          <li style="color: var(--gray-300);"><strong style="color:white;">A+ Content</strong> &mdash; Rich product pages with comparison charts, brand story, lifestyle images</li>
+          <li style="color: var(--gray-300);"><strong style="color:white;">Brand Store</strong> &mdash; Your own mini-website within Amazon (sd18sports.amazon.in)</li>
+          <li style="color: var(--gray-300);"><strong style="color:white;">Brand Analytics</strong> &mdash; See what customers search for and who they compare you to</li>
+          <li style="color: var(--gray-300);"><strong style="color:white;">Brand Protection</strong> &mdash; Prevent unauthorized sellers from listing under SD18</li>
+          <li style="color: var(--gray-300);"><strong style="color:white;">Sponsored Brands</strong> &mdash; Premium ad placements with your logo at the top of search</li>
+        </ul>
+        <div style="height:1px; background:var(--dark2); margin:16px 0;"></div>
+        <p class="text-xs" style="color: var(--gray-400);">Trademark registration costs &#8377;4,500&ndash;9,000 and takes 6&ndash;12 months. We can start selling without it and apply in parallel.</p>
+      </div>
+    </div>
+  </div>
+  <span class="page-num">04</span>
+  <span class="footer-brand">Elevate Strategy &middot; Confidential</span>
+</div>
+
+<!-- ─── SLIDE 5: FEE STRUCTURE ─── -->
+<div class="slide">
+  <div class="label label-orange">Fee Structure</div>
+  <h1 class="mb-8">What Amazon Charges Per Sale</h1>
+  <p class="mb-20">Three types of fees apply to every order. Here is exactly what SD18 would pay on a &#8377;600 cricket bat.</p>
+  <div class="cols" style="flex:1;">
+    <div style="flex:1.3;">
+      <table>
+        <thead>
+          <tr>
+            <th>Fee Type</th>
+            <th>Easy Ship</th>
+            <th>FBA</th>
+            <th>Self Ship</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Referral Fee (12%)</strong><br><span class="text-xs">Sports, Fitness &amp; Outdoors category</span></td>
+            <td><strong>&#8377;72</strong></td>
+            <td><strong>&#8377;72</strong></td>
+            <td><strong>&#8377;72</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Closing Fee</strong><br><span class="text-xs">Fixed fee based on item price slab</span></td>
+            <td><strong>&#8377;30</strong><br><span class="text-xs">(&#8377;501&ndash;1000 slab)</span></td>
+            <td><strong>&#8377;25</strong><br><span class="text-xs">(&#8377;501&ndash;1000 slab)</span></td>
+            <td><strong>&#8377;41</strong><br><span class="text-xs">(&#8377;501&ndash;1000 slab)</span></td>
+          </tr>
+          <tr>
+            <td><strong>Shipping / Fulfillment</strong><br><span class="text-xs">Delivery cost (weight &amp; distance based)</span></td>
+            <td><strong>~&#8377;40</strong><br><span class="text-xs">Amazon picks up</span></td>
+            <td><strong>~&#8377;60</strong><br><span class="text-xs">Amazon stores + ships</span></td>
+            <td><strong>&#8377;0</strong><br><span class="text-xs">You handle delivery</span></td>
+          </tr>
+          <tr>
+            <td><strong>GST on Fees (18%)</strong></td>
+            <td><strong>~&#8377;26</strong></td>
+            <td><strong>~&#8377;28</strong></td>
+            <td><strong>~&#8377;20</strong></td>
+          </tr>
+          <tr style="background: var(--green-light);">
+            <td><strong style="color:var(--green);">Total Amazon Fees</strong></td>
+            <td><strong style="color:var(--green);">~&#8377;168</strong></td>
+            <td><strong style="color:var(--green);">~&#8377;185</strong></td>
+            <td><strong style="color:var(--green);">~&#8377;133</strong></td>
+          </tr>
+          <tr style="background: var(--gray-50);">
+            <td><strong>Net to SD18 (per &#8377;600 bat)</strong></td>
+            <td><strong>&#8377;432 (72%)</strong></td>
+            <td><strong>&#8377;415 (69%)</strong></td>
+            <td><strong>&#8377;467 (78%)</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="text-xs mt-12" style="color: var(--gray-400);">Fees based on Amazon India seller fee schedule. Sports, Fitness &amp; Outdoors: 12% referral. Verify at sell.amazon.in/fees-and-pricing</p>
+    </div>
+    <div style="flex:0.6; display:flex; flex-direction:column; gap:12px;">
+      <div class="card card-green card-sm" style="text-align:center; flex:1; display:flex; flex-direction:column; justify-content:center;">
+        <p class="text-xs text-muted mb-4">Recommended</p>
+        <div class="big-num big-num-sm" style="margin-bottom:8px;">Easy Ship</div>
+        <p class="text-xs" style="color: var(--gray-600);">Best balance of cost, convenience, and customer experience. Amazon picks up from your store.</p>
+      </div>
+      <div class="card card-cream card-sm" style="text-align:center;">
+        <p class="text-xs fw-500" style="color: var(--text);">Monthly subscription: &#8377;499/month</p>
+        <p class="text-xs mt-4">Unlimited listings. Pays for itself with 1 sale.</p>
+      </div>
+      <div class="card card-sm" style="text-align:center;">
+        <p class="text-xs fw-500" style="color: var(--text);">Payouts: Every 7 days</p>
+        <p class="text-xs mt-4">Amazon deposits directly to your bank account.</p>
+      </div>
+    </div>
+  </div>
+  <span class="page-num">05</span>
+  <span class="footer-brand">Elevate Strategy &middot; Confidential</span>
+</div>
+
+<!-- ─── SLIDE 6: MARGIN ANALYSIS ─── -->
+<div class="slide">
+  <div class="label label-orange">Margin Analysis</div>
+  <h1 class="mb-8">What SD18 Actually Keeps Per Product</h1>
+  <p class="mb-20">Detailed margin breakdown across SD18&rsquo;s price range, assuming Easy Ship fulfillment.</p>
+  <div class="cols" style="flex:1;">
+    <div style="flex:1.4;">
+      <table>
+        <thead>
+          <tr>
+            <th>Product Example</th>
+            <th>Selling Price</th>
+            <th>Amazon Fees</th>
+            <th>Est. COGS</th>
+            <th style="color:var(--green);">Net Profit</th>
+            <th>Margin</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Tennis Ball</strong></td>
+            <td>&#8377;149</td>
+            <td>&#8377;30 (20%)</td>
+            <td>&#8377;50&ndash;70</td>
+            <td style="color: var(--green);"><strong>&#8377;49&ndash;69</strong></td>
+            <td>33&ndash;46%</td>
+          </tr>
+          <tr>
+            <td><strong>Cricket Ball (Leather)</strong></td>
+            <td>&#8377;349</td>
+            <td>&#8377;60 (17%)</td>
+            <td>&#8377;120&ndash;180</td>
+            <td style="color: var(--green);"><strong>&#8377;109&ndash;169</strong></td>
+            <td>31&ndash;48%</td>
+          </tr>
+          <tr>
+            <td><strong>Batting Gloves</strong></td>
+            <td>&#8377;449</td>
+            <td>&#8377;80 (18%)</td>
+            <td>&#8377;150&ndash;220</td>
+            <td style="color: var(--green);"><strong>&#8377;149&ndash;219</strong></td>
+            <td>33&ndash;49%</td>
+          </tr>
+          <tr>
+            <td><strong>Cricket Bat (Popular)</strong></td>
+            <td>&#8377;599</td>
+            <td>&#8377;168 (28%)</td>
+            <td>&#8377;200&ndash;300</td>
+            <td style="color: var(--green);"><strong>&#8377;131&ndash;231</strong></td>
+            <td>22&ndash;39%</td>
+          </tr>
+          <tr>
+            <td><strong>Cricket Bat (Premium)</strong></td>
+            <td>&#8377;749</td>
+            <td>&#8377;190 (25%)</td>
+            <td>&#8377;250&ndash;380</td>
+            <td style="color: var(--green);"><strong>&#8377;179&ndash;309</strong></td>
+            <td>24&ndash;41%</td>
+          </tr>
+          <tr>
+            <td><strong>Kit Bag</strong></td>
+            <td>&#8377;999</td>
+            <td>&#8377;220 (22%)</td>
+            <td>&#8377;350&ndash;500</td>
+            <td style="color: var(--green);"><strong>&#8377;279&ndash;429</strong></td>
+            <td>28&ndash;43%</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="text-xs mt-12" style="color: var(--orange); font-weight:500;">COGS are estimated. With your actual product costs, we build an exact margin model per SKU.</p>
+    </div>
+    <div style="flex:0.5; display:flex; flex-direction:column; gap:12px;">
+      <div class="card card-dark" style="flex:1; display:flex; flex-direction:column; justify-content:center; text-align:center; padding:20px;">
+        <p class="text-xs text-muted mb-8">Average Net Margin</p>
+        <div class="big-num" style="font-size:52px; color: var(--green); margin-bottom:8px;">28&ndash;45%</div>
+        <p class="text-xs" style="color: var(--gray-400);">After Amazon fees, before COGS</p>
+        <div style="height:1px; background:var(--dark2); margin:16px 0;"></div>
+        <p class="text-xs text-muted mb-8">After COGS (estimated)</p>
+        <div class="big-num big-num-sm" style="color: var(--amazon); margin-bottom:8px;">15&ndash;40%</div>
+        <p class="text-xs" style="color: var(--gray-400);">Healthy margin for volume sales</p>
+      </div>
+      <div class="card card-cream card-sm" style="text-align:center;">
+        <p class="text-xs fw-500" style="color: var(--text);">Higher-priced items have better margins because the fixed closing fee becomes a smaller percentage.</p>
+      </div>
+    </div>
+  </div>
+  <span class="page-num">06</span>
+  <span class="footer-brand">Elevate Strategy &middot; Confidential</span>
+</div>
+
+<!-- ─── SLIDE 7: REVENUE PROJECTIONS ─── -->
+<div class="slide">
+  <div class="label label-orange">Revenue Projections</div>
+  <h1 class="mb-8">What SD18 Could Earn on Amazon</h1>
+  <p class="mb-20">Three scenarios based on order volume. These are conservative estimates &mdash; many small cricket brands achieve 10+ orders/day within 6 months.</p>
+  <div class="cols" style="flex:1;">
+    <div class="card card-sm" style="flex:1; display:flex; flex-direction:column; text-align:center;">
+      <div class="tag tag-gray mb-16">Conservative</div>
+      <h3 class="mb-4">3&ndash;5 orders/day</h3>
+      <p class="text-xs mb-16" style="color: var(--gray-500);">First 3&ndash;6 months after launch</p>
+      <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
+        <div class="big-num big-num-sm" style="margin-bottom:8px;">&#8377;1.5&ndash;2.5L</div>
+        <p class="text-xs fw-500" style="color: var(--gray-600);">Monthly Revenue</p>
+        <div class="divider"></div>
+        <p class="text-xs" style="color: var(--gray-500);">~120 orders/month</p>
+        <p class="text-xs" style="color: var(--gray-500);">Avg. order: &#8377;550</p>
+        <div class="divider"></div>
+        <p class="text-xs fw-500" style="color: var(--green);">Net profit: &#8377;30,000&ndash;75,000/mo</p>
+      </div>
+      <div class="tag tag-gray mt-12">&#8377;18&ndash;30L/year</div>
+    </div>
+    <div class="card card-orange card-sm" style="flex:1; display:flex; flex-direction:column; text-align:center; border:2px solid var(--orange);">
+      <div class="tag tag-orange mb-16">Moderate (Target)</div>
+      <h3 class="mb-4">8&ndash;12 orders/day</h3>
+      <p class="text-xs mb-16" style="color: var(--gray-500);">Month 6&ndash;12 with ads + reviews</p>
+      <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
+        <div class="big-num big-num-sm big-num-amazon" style="margin-bottom:8px;">&#8377;4&ndash;6.5L</div>
+        <p class="text-xs fw-500" style="color: var(--gray-600);">Monthly Revenue</p>
+        <div class="divider"></div>
+        <p class="text-xs" style="color: var(--gray-500);">~300 orders/month</p>
+        <p class="text-xs" style="color: var(--gray-500);">Avg. order: &#8377;600</p>
+        <div class="divider"></div>
+        <p class="text-xs fw-500" style="color: var(--green);">Net profit: &#8377;1&ndash;2L/mo</p>
+      </div>
+      <div class="tag tag-orange mt-12">&#8377;50&ndash;80L/year</div>
+    </div>
+    <div class="card card-sm" style="flex:1; display:flex; flex-direction:column; text-align:center;">
+      <div class="tag tag-green mb-16">Aggressive</div>
+      <h3 class="mb-4">20&ndash;30 orders/day</h3>
+      <p class="text-xs mb-16" style="color: var(--gray-500);">Year 2+ with strong brand presence</p>
+      <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
+        <div class="big-num big-num-sm" style="margin-bottom:8px;">&#8377;10&ndash;18L</div>
+        <p class="text-xs fw-500" style="color: var(--gray-600);">Monthly Revenue</p>
+        <div class="divider"></div>
+        <p class="text-xs" style="color: var(--gray-500);">~750 orders/month</p>
+        <p class="text-xs" style="color: var(--gray-500);">Avg. order: &#8377;650</p>
+        <div class="divider"></div>
+        <p class="text-xs fw-500" style="color: var(--green);">Net profit: &#8377;3&ndash;6L/mo</p>
+      </div>
+      <div class="tag tag-green mt-12">&#8377;1.2&ndash;2Cr/year</div>
+    </div>
+  </div>
+  <p class="mt-16 text-sm fw-500" style="color: var(--text);">SD18&rsquo;s YouTube audience of 97,000 gives a massive head start &mdash; something most new Amazon sellers do not have.</p>
+  <span class="page-num">07</span>
+  <span class="footer-brand">Elevate Strategy &middot; Confidential</span>
+</div>
+
+<!-- ─── SLIDE 8: COMPETITIVE LANDSCAPE ─── -->
+<div class="slide">
+  <div class="label label-orange">Competitive Landscape on Amazon</div>
+  <h1 class="mb-8">Who SD18 Competes With &mdash; And Where You Win</h1>
+  <p class="mb-20">The budget cricket equipment segment on Amazon is competitive but not saturated. SD18 has unique advantages.</p>
+  <div class="cols" style="flex:1;">
+    <div style="flex:1.2;">
+      <table>
+        <thead>
+          <tr>
+            <th>Brand</th>
+            <th>Price Range</th>
+            <th>Est. Listings</th>
+            <th>Avg. Rating</th>
+            <th>SD18 Edge</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>SG Cricket</strong></td>
+            <td>&#8377;300&ndash;15,000</td>
+            <td>500+</td>
+            <td>4.0&ndash;4.3</td>
+            <td style="color: var(--green);">SD18 is more affordable</td>
+          </tr>
+          <tr>
+            <td><strong>SS Cricket</strong></td>
+            <td>&#8377;400&ndash;12,000</td>
+            <td>300+</td>
+            <td>3.8&ndash;4.2</td>
+            <td style="color: var(--green);">Better value at budget tier</td>
+          </tr>
+          <tr>
+            <td><strong>DSC</strong></td>
+            <td>&#8377;350&ndash;8,000</td>
+            <td>200+</td>
+            <td>3.5&ndash;4.0</td>
+            <td style="color: var(--green);">Community &amp; YouTube trust</td>
+          </tr>
+          <tr>
+            <td><strong>Jaspo / Klapp / CW</strong></td>
+            <td>&#8377;200&ndash;2,000</td>
+            <td>50&ndash;100 each</td>
+            <td>3.5&ndash;4.0</td>
+            <td style="color: var(--green);">97K YouTube &gt; their 0</td>
+          </tr>
+          <tr style="background: var(--green-light);">
+            <td><strong style="color: var(--green);">SD18 Sports</strong></td>
+            <td>&#8377;449&ndash;749</td>
+            <td style="color:var(--red); font-weight:600;">0</td>
+            <td>&mdash;</td>
+            <td style="color: var(--green); font-weight:600;">Community + YouTube + Academy</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="text-xs mt-16" style="color: var(--gray-400);">Listing counts and ratings are estimates. Verify by searching each brand on amazon.in.</p>
+    </div>
+    <div style="flex:0.6; display:flex; flex-direction:column; gap:12px;">
+      <div class="card card-green card-sm" style="flex:1; display:flex; flex-direction:column;">
+        <h3 style="font-size:14px;" class="mb-8">SD18&rsquo;s Unfair Advantages</h3>
+        <ul class="list" style="gap:8px; flex:1;">
+          <li><strong>97,300 YouTube subscribers</strong> who already know and trust the brand</li>
+          <li><strong>Bihar Cricket Academy</strong> endorsement for credibility</li>
+          <li><strong>Tournament presence</strong> &mdash; real-world social proof</li>
+          <li><strong>Cricketer Akash</strong> association for influencer-style trust</li>
+          <li><strong>Budget sweet spot</strong> &mdash; most Amazon cricket buyers spend &#8377;300&ndash;1,000</li>
+        </ul>
+      </div>
+      <div class="card card-cream card-sm" style="text-align:center;">
+        <p class="text-xs fw-500" style="color: var(--text);">Small D2C brands with zero audience already sell 5&ndash;10 orders/day on Amazon. SD18 starts with 97K ready buyers.</p>
+      </div>
+    </div>
+  </div>
+  <span class="page-num">08</span>
+  <span class="footer-brand">Elevate Strategy &middot; Confidential</span>
+</div>
+
+<!-- ─── SLIDE 9: OUR AMAZON SERVICES ─── -->
+<div class="slide" style="background: var(--green-light);">
+  <div class="label">Our Services</div>
+  <h1 class="mb-8">What Elevate Strategy Will Do for SD18 on Amazon</h1>
+  <p class="mb-24">End-to-end Amazon setup and ongoing management. You focus on making great products &mdash; we handle the platform.</p>
+  <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px; flex:1;">
+    <div class="card card-sm" style="display:flex; flex-direction:column;">
+      <div class="tag tag-orange mb-12">One-Time Setup</div>
+      <h3 style="font-size:14px;" class="mb-8">Amazon Store Launch</h3>
+      <ul class="list list-orange" style="gap:6px; flex:1;">
+        <li>Seller Central account registration &amp; configuration</li>
+        <li>Product catalog creation (all SKUs)</li>
+        <li>Keyword research for each product listing</li>
+        <li>SEO-optimized titles, bullet points, descriptions</li>
+        <li>Product photography guidance / editing</li>
+        <li>Category &amp; shipping configuration</li>
+        <li>Brand Registry application (if trademark available)</li>
+      </ul>
+    </div>
+    <div class="card card-sm" style="display:flex; flex-direction:column;">
+      <div class="tag tag-green mb-12">Monthly Management</div>
+      <h3 style="font-size:14px;" class="mb-8">Ongoing Growth &amp; Optimization</h3>
+      <ul class="list" style="gap:6px; flex:1;">
+        <li>Amazon PPC campaign setup &amp; management</li>
+        <li>Listing optimization based on performance data</li>
+        <li>Review management &amp; customer response</li>
+        <li>Inventory monitoring &amp; restock alerts</li>
+        <li>Competitor price &amp; listing tracking</li>
+        <li>Monthly performance reports with insights</li>
+        <li>A+ Content creation (with Brand Registry)</li>
+      </ul>
+    </div>
+    <div class="card card-sm" style="display:flex; flex-direction:column;">
+      <div class="tag tag-orange mb-12">Content &amp; Creative</div>
+      <h3 style="font-size:14px;" class="mb-8">Product Presentation</h3>
+      <ul class="list list-orange" style="gap:6px; flex:1;">
+        <li>Product image editing &amp; infographics</li>
+        <li>A+ Content pages (enhanced brand content)</li>
+        <li>Brand Store design (Amazon storefront)</li>
+        <li>Video content from existing YouTube library</li>
+      </ul>
+    </div>
+    <div class="card card-sm" style="display:flex; flex-direction:column;">
+      <div class="tag tag-green mb-12">Advertising</div>
+      <h3 style="font-size:14px;" class="mb-8">Amazon PPC Campaigns</h3>
+      <ul class="list" style="gap:6px; flex:1;">
+        <li>Sponsored Products: appear in search results</li>
+        <li>Sponsored Brands: logo + multiple products at top</li>
+        <li>Automatic + manual targeting campaigns</li>
+        <li>Budget optimization &amp; ACOS management</li>
+      </ul>
+    </div>
+  </div>
+  <span class="page-num">09</span>
+  <span class="footer-brand">Elevate Strategy &middot; Confidential</span>
+</div>
+
+<!-- ─── SLIDE 10: COMPLETE SERVICE PRICING ─── -->
+<div class="slide">
+  <div class="label">Investment</div>
+  <h1 class="mb-8">Complete Service &amp; Pricing</h1>
+  <p class="mb-20">Everything SD18 needs to dominate online &mdash; website, SEO, social media, and Amazon &mdash; in one partnership.</p>
+  <div class="cols cols-tight" style="flex:1;">
+    <div style="flex:1; display:flex; flex-direction:column; gap:12px;">
+      <h3 style="font-size:13px; color: var(--gray-500); text-transform:uppercase; letter-spacing:0.08em;">One-Time Setup</h3>
+      <div class="card card-sm" style="display:flex; justify-content:space-between; align-items:center;">
+        <div>
+          <h3 style="font-size:14px;">Website Redesign</h3>
+          <p class="text-xs">Custom-built, SEO-optimized, mobile-first</p>
+        </div>
+        <div class="big-num big-num-xs" style="text-align:right; white-space:nowrap; color: var(--text);">TBD</div>
+      </div>
+      <div class="card card-sm" style="display:flex; justify-content:space-between; align-items:center;">
+        <div>
+          <h3 style="font-size:14px;">Amazon Store Setup</h3>
+          <p class="text-xs">Account, listings, Brand Registry application</p>
+        </div>
+        <div class="big-num big-num-xs" style="text-align:right; white-space:nowrap; color: var(--text);">TBD</div>
+      </div>
+      <div class="card card-cream card-sm" style="display:flex; justify-content:space-between; align-items:center;">
+        <div>
+          <h3 style="font-size:14px;">Brand Identity Package</h3>
+          <p class="text-xs">Logo refinement, style guide, product photography</p>
+        </div>
+        <div class="big-num big-num-xs" style="text-align:right; white-space:nowrap; color: var(--text);">TBD</div>
+      </div>
+    </div>
+    <div style="flex:1; display:flex; flex-direction:column; gap:12px;">
+      <h3 style="font-size:13px; color: var(--gray-500); text-transform:uppercase; letter-spacing:0.08em;">Monthly Retainer</h3>
+      <div class="card card-sm" style="display:flex; justify-content:space-between; align-items:center;">
+        <div>
+          <h3 style="font-size:14px;">SEO &amp; Content Marketing</h3>
+          <p class="text-xs">Blog posts, keyword optimization, link building</p>
+        </div>
+        <div class="big-num big-num-xs" style="text-align:right; white-space:nowrap; color: var(--text);">TBD</div>
+      </div>
+      <div class="card card-sm" style="display:flex; justify-content:space-between; align-items:center;">
+        <div>
+          <h3 style="font-size:14px;">Social Media Management</h3>
+          <p class="text-xs">Instagram revival, Facebook, YouTube cross-posting</p>
+        </div>
+        <div class="big-num big-num-xs" style="text-align:right; white-space:nowrap; color: var(--text);">TBD</div>
+      </div>
+      <div class="card card-sm" style="display:flex; justify-content:space-between; align-items:center;">
+        <div>
+          <h3 style="font-size:14px;">Amazon Monthly Management</h3>
+          <p class="text-xs">PPC, listings, reviews, optimization, reports</p>
+        </div>
+        <div class="big-num big-num-xs" style="text-align:right; white-space:nowrap; color: var(--text);">TBD</div>
+      </div>
+      <div class="card card-orange card-sm" style="display:flex; justify-content:space-between; align-items:center;">
+        <div>
+          <h3 style="font-size:14px;">Amazon PPC Ad Spend</h3>
+          <p class="text-xs">Paid directly to Amazon (we manage, you fund)</p>
+        </div>
+        <div class="big-num big-num-xs" style="text-align:right; white-space:nowrap; color: var(--text);">TBD</div>
+      </div>
+    </div>
+  </div>
+  <div class="card card-dark mt-16" style="text-align:center; padding:16px 24px;">
+    <p class="text-sm" style="color: var(--gray-300);">Pricing will be discussed based on scope, timeline, and SD18&rsquo;s current revenue. We structure our pricing so that <strong style="color: var(--green);">you see returns before the investment feels heavy</strong>.</p>
+  </div>
+  <span class="page-num">10</span>
+  <span class="footer-brand">Elevate Strategy &middot; Confidential</span>
+</div>
+
+<!-- ─── SLIDE 11: TIMELINE ─── -->
+<div class="slide">
+  <div class="label">Roadmap</div>
+  <h1 class="mb-8">90-Day Launch Plan</h1>
+  <p class="mb-20">From today to SD18 selling on Amazon with a brand-new website and active social media.</p>
+  <div style="display:flex; gap:16px; flex:1;">
+    <div class="card card-sm" style="flex:1; display:flex; flex-direction:column; border-top:4px solid var(--orange);">
+      <h3 style="font-size:14px; color: var(--orange);" class="mb-4">Week 1&ndash;2</h3>
+      <p class="text-xs fw-500 mb-8" style="color: var(--text);">Foundation</p>
+      <ul class="list list-orange" style="gap:6px; flex:1;">
+        <li>Fix critical website issues</li>
+        <li>Amazon Seller Central registration</li>
+        <li>Product photography session</li>
+        <li>Keyword research (website + Amazon)</li>
+        <li>Instagram account revival begins</li>
+      </ul>
+    </div>
+    <div class="card card-sm" style="flex:1; display:flex; flex-direction:column; border-top:4px solid var(--amazon);">
+      <h3 style="font-size:14px; color: var(--amazon);" class="mb-4">Week 3&ndash;4</h3>
+      <p class="text-xs fw-500 mb-8" style="color: var(--text);">Amazon Launch</p>
+      <ul class="list list-orange" style="gap:6px; flex:1;">
+        <li>First 20 products listed on Amazon</li>
+        <li>Easy Ship configured and tested</li>
+        <li>PPC campaigns launched</li>
+        <li>Website redesign in progress</li>
+        <li>Social media posting 4&ndash;5x/week</li>
+      </ul>
+    </div>
+    <div class="card card-sm" style="flex:1; display:flex; flex-direction:column; border-top:4px solid var(--navy);">
+      <h3 style="font-size:14px; color: var(--navy);" class="mb-4">Month 2</h3>
+      <p class="text-xs fw-500 mb-8" style="color: var(--text);">Growth</p>
+      <ul class="list" style="gap:6px; flex:1;">
+        <li>New website goes live</li>
+        <li>All products listed on Amazon</li>
+        <li>First Amazon reviews coming in</li>
+        <li>YouTube &rarr; website funnel active</li>
+        <li>Community page launched</li>
+      </ul>
+    </div>
+    <div class="card card-sm" style="flex:1; display:flex; flex-direction:column; border-top:4px solid var(--green);">
+      <h3 style="font-size:14px; color: var(--green);" class="mb-4">Month 3</h3>
+      <p class="text-xs fw-500 mb-8" style="color: var(--text);">Optimization</p>
+      <ul class="list" style="gap:6px; flex:1;">
+        <li>Amazon PPC optimization based on data</li>
+        <li>SEO results beginning to show</li>
+        <li>Instagram growing consistently</li>
+        <li>WhatsApp integration / AI chatbot</li>
+        <li>First revenue report &amp; strategy review</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card card-cream mt-16" style="text-align:center; padding:12px 24px;">
+    <p class="text-sm fw-500" style="color: var(--text);">By Day 90: SD18 has a new website, active social media, and is selling on Amazon India &mdash; with data to plan the next 6 months.</p>
+  </div>
+  <span class="page-num">11</span>
+  <span class="footer-brand">Elevate Strategy &middot; Confidential</span>
+</div>
+
+<!-- ─── SLIDE 12: CLOSING ─── -->
+<div class="slide" style="background: var(--amazon-dark); justify-content: center; align-items: center; text-align: center;">
+  <div>
+    <div style="display:inline-block; padding: 6px 16px; border-radius: 8px; background: rgba(255,153,0,0.15); margin-bottom: 24px;">
+      <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--amazon);">The Opportunity Is Now</span>
+    </div>
+    <h1 style="color: white; font-size: 36px; margin-bottom: 16px; line-height: 1.4;">97,000 people follow SD18 on YouTube.<br>350 million people shop on Amazon India.<br><span style="color: var(--amazon);">Let them find you.</span></h1>
+    <div style="width: 48px; height: 2px; background: var(--amazon); margin: 40px auto;"></div>
+    <p style="color: var(--gray-400); font-size: 16px; margin-bottom: 4px; font-weight: 500;">Elevate Strategy</p>
+    <p style="color: var(--gray-500); font-size: 13px;">elevatestrategy.co.in &middot; hello@elevatestrategy.co.in</p>
+  </div>
+  <span class="footer-brand" style="color: var(--gray-600);">Elevate Strategy &middot; Confidential</span>
+</div>
+
+</body>
+</html>
