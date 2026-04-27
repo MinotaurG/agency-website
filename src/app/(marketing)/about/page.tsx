@@ -62,13 +62,6 @@ const values = [
   },
 ];
 
-const highlights = [
-  { label: "Where We Come From", value: "Hazaribagh, Jharkhand" },
-  { label: "Education", value: "IIM, NLU, Panjab University" },
-  { label: "Experience", value: "Amazon, Ranchi High Court, DAV College Chandigarh" },
-  { label: "Partnership", value: "50/50, Founder-Led" },
-];
-
 export default function AboutPage() {
   return (
     <>
@@ -81,8 +74,8 @@ export default function AboutPage() {
                 About Us
               </p>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading tracking-tight">
-                Built by People,{" "}
-                <span className="text-primary">Not a Pitch Deck</span>
+                Strategy That{" "}
+                <span className="text-primary">Grows With You</span>
               </h1>
               <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-2xl">
                 We are two friends from a small town in Jharkhand who believe
@@ -97,7 +90,7 @@ export default function AboutPage() {
       {/* Our Story */}
       <section className="py-24 bg-muted/50">
         <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <div className="max-w-3xl">
             <ScrollReveal>
               <div>
                 <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">
@@ -137,25 +130,6 @@ export default function AboutPage() {
                     forward-looking thinking to businesses that deserve better —
                     whether you are a startup in Asansol or a brand in Bengaluru.
                   </p>
-                </div>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal delay={0.2}>
-              <div className="bg-background rounded-3xl p-8 sm:p-10 border">
-                <h3 className="text-sm font-semibold text-primary uppercase tracking-wider mb-8">
-                  At a Glance
-                </h3>
-                <div className="space-y-6">
-                  {highlights.map((item) => (
-                    <div key={item.label}>
-                      <div className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
-                        {item.label}
-                      </div>
-                      <div className="mt-1 text-base font-medium text-foreground">
-                        {item.value}
-                      </div>
-                    </div>
-                  ))}
                 </div>
               </div>
             </ScrollReveal>
