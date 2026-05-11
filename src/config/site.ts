@@ -26,6 +26,7 @@ export const siteConfig = {
   },
   contact: {
     email: "hello@elevatestrategy.co.in",
-    phone: "+91 XXXXX XXXXX",
+    phone: "+91 70040 00329",
+    phone2: "+91 89868 67272",
   },
 };

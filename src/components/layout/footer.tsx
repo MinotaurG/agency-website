@@ -82,6 +82,14 @@ export function Footer() {
                   {siteConfig.contact.phone}
                 </a>
               </li>
+              <li>
+                <a
+                  href={`tel:${siteConfig.contact.phone2}`}
+                  className="hover:text-white transition-colors"
+                >
+                  {siteConfig.contact.phone2}
+                </a>
+              </li>
             </ul>
             <div className="flex gap-4 mt-6">
               {Object.entries(siteConfig.links).map(([platform, url]) => (

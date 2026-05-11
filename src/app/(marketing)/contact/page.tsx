@@ -23,6 +23,12 @@ const contactInfo = [
     href: `tel:${siteConfig.contact.phone}`,
   },
   {
+    icon: Phone,
+    label: "Phone 2",
+    value: siteConfig.contact.phone2,
+    href: `tel:${siteConfig.contact.phone2}`,
+  },
+  {
     icon: MapPin,
     label: "Location",
     value: "Remote — Worldwide",
